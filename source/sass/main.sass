@@ -9,8 +9,6 @@
 @import "../libs/anim-modal.css"
 @import "../libs/slidebars.min.css"
 @import "../libs/select2.min.css"
-@import "../libs/owl.carousel.min.css"
-@import "../libs/owl.theme.default.min.css"
 @import "../libs/swiper.min.css"
 
 html
@@ -73,7 +71,8 @@ body
 //-moz-osx-font-smoothing: grayscale
 
 h1
-	@include font($main_color, 28, $font_main_regular, 1.2)
+	@include font($main_color, 22, $font_OpenSansBold, 1.2)
+	text-transform: uppercase
 p,ul
 	padding: 0
 	margin: 0
@@ -651,94 +650,308 @@ nav[canvas]
 			border: 2px solid transparent
 			background-color: #ff9600
 			color: #fff
-// Секция top-section
-.top-section
-	text-align: center
-	min-height: 660px
-	height: 100vh
-	background: url(../img/header_bg.jpg) no-repeat
-	background-size: cover
-	.container
-		height: 100%
-		min-height: 100%
-		.row
-			height: 100%
-			min-height: 100%
-			flex-direction: column
-			align-items: center
-.top-section__title
-	margin-top: 115px
-	flex: 1 auto
+// блок give-and-receive
+.give-and-receive
+	display: flex
+	margin-bottom: 40px
+	button
+		width: 45px
+		height: 25px
+		border: none
+		margin-right: 5px
+		background-color: #fff
+		border-radius: 5px
+		padding: 0
+		@include fz(14)
+		font-family: $font_OpenSansRegular
+		transition: 0.5s
+		&.active
+			background-color: #2dc0bf
+			outline: 0
+		&:hover
+			background-color: #2dc0bf
+			outline: 0
+		&:active
+			background-color: #2dc0bf
+			outline: 0
+		&:focus
+			background-color: #2dc0bf
+			outline: 0
+.give-and-receive__give
+	width: 385px
+	padding-right: 15px
+.give-and-receive__give-filter
+	display: flex
+	margin-bottom: 20px
+.give-and-receive__receive
+	width: 485px
+	padding-left: 15px
+.give-and-receive__receive-filter
+	display: flex
+	margin-bottom: 20px
+.give-and-receive__title
+	width: 100%
+	height: 50px
+	padding-left: 20px
+	line-height: 50px
+	color: #fff
+	text-transform: uppercase
+	background-color: #2dc0bf
+	border: 1px solid #2dc0bf
+	border-radius: 5px 5px 0 0
+	&.aside-title
+		background-color: $main_txt_color
+		border: 1px solid $main_txt_color
+.give-and-receive__give-items, .give-and-receive__receive-items
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.give-and-receive__receive-items
+	.give-and-receive__item-txt
+		width: 240px
+.give-and-receive__item
+	height: 80px
+	display: flex
+	position: relative
+	padding-left: 20px
+	padding-right: 20px
+	transition: 0.5s
+	&:hover
+		background-color: $main_color
+	&.active
+		background-color: $main_color
+.give-and-receive__item-img
+	max-width: 100%
+	width: 46px
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		max-width: 100%
+		width: auto
+		height: auto
+.give-and-receive__item-txt
+	width: 200px
+	padding-left: 10px
 	display: flex
 	flex-direction: column
-	align-items: center
-	justify-content: flex-end
+	align-items: flex-start
+	justify-content: center
+	margin-right: auto
 	p
-		@include fz(30)
-		color: #fff
-
-.top-section__bot-txt
-	margin-top: 50px
-	flex: 1 0 auto
-	p
-		@include fz(25)
-		color: #fff
-	.is-sticky
-		p
-			margin: auto
-			left: 0
-			right: 0
-			z-index: 1000 !important
-			background: #000
-.top-section__circle
-	flex: 0 0 auto
-// Секция our_advantages
-.our-advantages
-	min-height: 630px
+		line-height: 1.2
+.give-and-receive__item-quantity
+	width: 150px
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	justify-content: center
+	word-break: break-all
+.give-and-receive__item-divider
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	padding-left: 20px
+	padding-right: 20px
+	.give-and-receive__item-divider-inner
+		height: 1px
+		background: #aaa
+//	Блок .currency-reserves
+.currency-reserves
 	background-color: #fff
-	padding-top: 75px
-	.our-advantages__title
-		margin-bottom: 10px
-		text-align: center
-		h2
-			color: #626262
-			text-align: center
-			font-size: 35px
-	.our-advantages__item
-		margin-bottom: 30px
-		min-height: 230px
-		h3
-			font-size: 26px
-			text-align: center
-		p
-			margin-top: 15px
-			@include fz(16)
-			line-height: 1.2
-			text-align: center
-		.our-advantages__img
-			text-align: center
-			i
-				@include fz(72)
-				color: #00b6f4
-// Секция main_content
-.main_content
-	text-align: center
-	.owl-carousel.owl-drag .owl-item
-		min-height: 300px
-		background-color: #00b6f4
+	border: 0.4px solid #dddddd
+	margin-bottom: 40px
+.currency-reserves__slider
+	width: 99.9%
+	height: 803px
+	background-color: #ffffff
+.currency-reserves__slider-item
+	height: 80px
+	display: flex
+	padding-left: 20px
+	padding-right: 20px
+	position: relative
+	.currency-reserves__slider-item-img
+		max-width: 100%
+		width: 48px
 		display: flex
 		align-items: center
 		justify-content: center
-	.swiper-container
+		img
+			max-width: 100%
+			width: auto
+			height: auto
+	.currency-reserves__slider-item-txt
+		width: 170px
+		padding-left: 10px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		p
+			line-height: 1.2
+			&:first-of-type
+				font-family: $font_OpenSansSemiBold
+	.currency-reserves__slider-item-divider
+		position: absolute
+		bottom: 0
+		left: 0
 		width: 100%
-		height: 300px
-		.swiper-slide
-			display: flex
-			align-items: center
-			justify-content: center
-		.swiper-pagination
-	.select2-container
-		width: 300px
+		.currency-reserves__slider-item-divider-inner
+			height: 1px
+			background: #aaa
+			margin-right: 20px
+			margin-left: 20px
+.currency-reserves__slider-navigation
+	padding-top: 14px
+	padding-bottom: 14px
+	text-align: center
+	user-select: none
+	.swiper-button-next, .swiper-button-prev
+		display: inline-block
+		position: relative
+		background-image: none
+		width: inherit
+		height: inherit
+		top: inherit
+		left: inherit
+		right: inherit
+		margin: 0
+		user-select: none
+		i
+			user-select: none
+			color: $main_color
+	.swiper-button-next
+		margin-right: 5px
+// блок Общий заголовок h2
+.title-h2
+	margin-bottom: 40px
+	h2
+		margin-bottom: 20px
+		text-transform: uppercase
+		@include font($main_txt_color, 22, $font_OpenSansSemiBold, 1.2)
+	.title-h2__divider
+		width: 150px
+		height: 4px
+		background-color: #e4e4e4
+		.title-h2__divider-inner
+			width: 70px
+			height: 100%
+			background-color: #2dc0bf
+// блок .reviews
+.reviews
+	padding-top: 35px
+	padding-left: 20px
+	padding-bottom: 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.reviews__button
+	text-align: center
+.reviews-items
+	display: flex
+	margin-bottom: 40px
+.reviews-item
+	margin-right: 32px
+	&:last-of-type
+		margin-right: 0
+.reviews-item__message
+	width: 400px
+	height: 80px
+	margin-bottom: 15px
+	padding: 10px 10px 5px 20px
+	background-color: #f2f2f2
+	border-radius: 5px
+	position: relative
+	&:after
+		@include css-triangle(#f2f2f2,down,10px)
+		bottom: -10px
+	p
+		height: 58px
+		overflow: hidden
+		line-height: 1.2
+.reviews-item__author-and-time
+	p
+		@include font($main_txt_color, 18, $font_OpenSansSemiBold, 1.2)
+		time
+			@include font($main_txt_color, 18, $font_OpenSansRegular, 1.2)
+// блок .reviews
+.news
+	padding-top: 35px
+	padding-left: 20px
+	padding-bottom: 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.news__button
+	text-align: center
+.news-items
+	display: flex
+	margin-bottom: 40px
+.news-item
+	width: 400px
+	height: 108px
+	display: flex
+	margin-right: 32px
+	padding-bottom: 15px
+	background-color: #f2f2f2
+	&:last-of-type
+		margin-right: 0
+.news-item__date
+	width: 60px
+	height: 60px
+	margin-right: 20px
+	display: flex
+	align-items: center
+	justify-content: center
+	background: $main_color
+	word-break: break-all
+	time
+		text-align: center
+		@include font(#fff, 18, $font_OpenSansSemiBold, 1.2)
+.news-item__message
+	width: 310px
+	padding-top: 15px
+	display: flex
+	flex-direction: column
+	p
+		height: 38px
+		overflow: hidden
+		line-height: 1.2
+		margin-bottom: auto
+	a
+		display: inline-table
+		color: $main_color
+		text-decoration: underline
+		&:hover i
+			transform: translateX(10px)
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+
+		i
+			margin-left: 5px
+			transition: 0.5s
+			transform: translatex(0px)
+// Блок .aside
+.aside
+	margin-top: 44px
+// Секция .last-exchange
+.last-exchange
+	padding: 35px 20px 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+	.title-h2
+		margin-bottom: 20px
+.last-exchange__time
+	height: 37px
+	line-height: 37px
+	padding-left: 20px
+	background-color: #f2f2f2
+	border-radius: 5px
 // Пример checkbox
 label.check, label.radio
 	display: inline-flex
@@ -764,45 +977,7 @@ label.check, label.radio
 				display: none
 			&.fa-2
 				display: inline-flex
-// Секция 
-.intermediate
-	text-align: center
-	background-color: #00b6f4
-	padding-top: 50px
-	padding-bottom: 50px
-	.intermediate_title
-		max-width: 650px
-		margin: auto
-		color: #052243
-		h3
-			margin: 0
-			text-transform: uppercase
-			@include fz(24)
-			color: #052243
-	.intermediate_wrap
-		margin-top: 40px
-		form
-		.intermediate_item
-			margin-bottom: 20px
-			input
-				width: 100%
-				display: inline-block
-				border: 1px solid #a2b6c9
-				background: #fff
-				color: #43637f
-				height: 40px
-				padding: 0 0 0 9px
-				&::-webkit-input-placeholder
-					color: #43637f
-				&:-moz-placeholder
-					color: #43637f
-				&::-moz-placeholder
-					color: #43637f
-				&:-ms-input-placeholder
-					color: #43637f
-			input[type=submit]
-				background: #fff
-				color: #43637f
+
 	
 //	Секция 
 //	Секция

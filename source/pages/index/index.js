@@ -1,13 +1,12 @@
+import Swiper from 'swiper/dist/js/swiper.js';
 import common from '../../js/common';
 
-require("../../libs/libs").owl_carousel();
-import Swiper from 'swiper';
+
 import '../../pages/index/index.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import '../../pages/modal.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import './index.sass';
 
 import animate from '../../js/animate';
-import App from '../../js/react';
 
 
 $(document).ready(function () {
@@ -29,17 +28,17 @@ $(document).ready(function () {
 			theme: 'tooltipster-light'
 		});
 	}
-	//  Активация слайдера
-	$(".owl-carousel").owlCarousel({
-		loop: true,
-		items: 1,
-		dots: true,
-		nav: true
-	});
 	// инициализация swiper слайдера
 	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 10,
+		spaceBetween: 0,
+		direction: 'vertical',
 		pagination: {
 			el: '.swiper-pagination',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
 		},
 	});
 	// инициализация select2

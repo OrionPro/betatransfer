@@ -2,171 +2,424 @@ extends ../base
 block title
 	| Index page
 block main
-	section.top-section
+	// Секция betatransfer-is
+	section.betatransfer-is
+		.container
+			.betatransfer-is-wrap
+				h1 Betatransfer это
+				.betatransfer-is__items
+					.betatransfer-is__item
+						.betatransfer-is__item-wrap-img
+							.betatransfer-is__item-img
+								img(src=require("../../img/betatransfer-is__item-img.png"))
+						.betatransfer-is__item-txt
+							p Быстрая скорость обмена
+					.betatransfer-is__item
+						.betatransfer-is__item-wrap-img
+							.betatransfer-is__item-img
+								img(src=require("../../img/betatransfer-is__item-img2.png"))
+						.betatransfer-is__item-txt
+							p Большие объемы резервов
+					.betatransfer-is__item
+						.betatransfer-is__item-wrap-img
+							.betatransfer-is__item-img
+								img(src=require("../../img/betatransfer-is__item-img3.png"))
+						.betatransfer-is__item-txt
+							p Отзывчивая онлайн поддержка
+	section.betatransfer
 		.container
 			.row
-				.top-section__title
-					h1
-						span ФУНКЦИОНАЛЬНЫЕ
-						|  ЛЕНДИНГИ НА ЗАКАЗ
-					p для максимального удобства
-					a(href="#" class="main_btn") проверка
-					hr
-					button(type="text" class="main_btn") проверка
-				.top-section__bot-txt
-					p.sticky Более
-						span  400
-						|   довольных клиентов за
-						span  8 лет
-						|  успешной работы!
-				.top-section__circle
-					include ../../img/svg_circle.svg
-	// Секция  our_advantages
-	section#our_advantages.our-advantages
-		.container
-			.our-advantages__title
-				h2 Наши преимущества
-				img(src=require("../../img/garant.svg"))
-			.row
-				.our-advantages__item.col-lg-4.col-md-6
-					.our-advantages__img
-						i.fa.fa-users
-					h3 Заголовок
-					p Индивидуальный подход к каждому клиенту
-				.our-advantages__item.col-lg-4.col-md-6
-					.our-advantages__img
-						i.fa.fa-diamond
-					h3 Заголовок
-					p Неповторимость и практичность каждого проекта мебели
-				.our-advantages__item.col-lg-4.col-md-6
-					.our-advantages__img
-						i.fa.fa-list-ol
-					h3 Заголовок
-					p Многообразие материалов и стилевых решений
-				.our-advantages__item.col-lg-4.col-md-6
-					.our-advantages__img
-						i.fa.fa-pencil
-					h3 Заголовок
-					p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
-				.our-advantages__item.col-lg-4.col-md-6
-					.our-advantages__img
-						i.fa.fa-credit-card-alt
-					h3 Заголовок
-					p Возможность оформления мебели в кредит
-				.our-advantages__item.col-lg-4.col-md-6
-					.our-advantages__img
-						i.fa.fa-wrench
-					h3 Заголовок
-					p Изготовление мебели только из высококачественных материалов
-	// Тест react
-	section.react
-		.container
-			#app
-	// Секция main_content
-	section.main_content
-		.container
-			h2 OWL Слайдер
-			.owl-carousel.owl-theme
-				.item
-					h3 Слайдер 1
-				.item
-					h3 Слайдер 2
-			h2 Swiper
-			.swiper-container
-				.swiper-wrapper
-					.swiper-slide Slide 1
-					.swiper-slide Slide 2
-					.swiper-slide Slide 3
-					.swiper-slide Slide 4
-					.swiper-slide Slide 5
-					.swiper-slide Slide 6
-					.swiper-slide Slide 7
-					.swiper-slide Slide 8
-					.swiper-slide Slide 8
-					.swiper-slide Slide 10
-				.swiper-pagination
-			div Пример checkbox
-			label.check.noselect
-				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span первый чек
-			label.check.noselect
-				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span второй чек
-			div Пример radio button
-			label.radio.noselect
-				input(type='radio', name='radio')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span первый чек
-			label.radio.noselect
-				input(type='radio', name='radio', checked='')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span второй чек
-			h3 Пример Select на плагине Select2
-				h4 с тегами
-				.select2-container
-					select.select2-tags.form-control(multiple)
-						option angular
-						option react
-						option vui
-						option(disabled) ember
-						option backbone
-				h4 обычный
-				.select2-container
-					select.select2
-						option angular
-						option react
-						option vui
-						option(disabled) ember
-						option backbone
-	// Секция  ask-form-title
-	section.intermediate
-		.container
-			.intermediate_title
-				h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
-			.intermediate_wrap
-				form#form-file.clearfix
-					.file_wrap
-						input(type='file' name='field' multiple)
-					.row
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
-								i.fa.fa-check
-								input(name='name', type='text', placeholder='Имя')
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
-								i.fa.fa-check
-								input(name='email', type='email', placeholder='Почта')
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
-								i.fa.fa-check
-								input(name='phone', type='tel', placeholder='Телефон')
-						input(type='hidden', name='form_name', value='')
-						input(type='hidden', name='form_type', value='normal')
-						.intermediate_item.col-lg-3
-							input(type='submit', value='Записаться')
-			h3 Пример табов с вложенностью ещё одного таба
-			.tabs-items-wrap
-				button.main_btn.tabs-item.active Мужские размеры
-				button.main_btn.tabs-item Женские размеры
-			.tabs-wrap.active
-				p.
-					Lorem ipsum dolor sit amet, an eam simul albucius. An ius duis aeque suscipit, ius ullum suscipit eu. Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
-			.tabs-wrap
-				p.
-					Persius volumus est cu! Ad populo erroribus sed. Timeam legimus maiorum usu te, civibus detracto at vel. Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.
-				h4 Вложенный таб
-				.tabs-items-wrap-inner
-					button.main_btn.tabs-item.active Мужские размеры 2
-					button.main_btn.tabs-item Женские размеры 2
-					.tabs-wrap-inner.active
-						p Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
-					.tabs-wrap-inner
-						p Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.
+				.col-lg-9
+					main.main
+						.give-and-receive
+							.give-and-receive__give
+								.give-and-receive__give-filter
+									button.active Все
+									button USD
+									button RUB
+									button BTC
+									button DASH
+									button ETH
+									button LTC
+								.give-and-receive__title
+									span Вы отдаёте
+								.give-and-receive__give-items
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-bitcoin.png"))
+										.give-and-receive__item-txt
+											p Bitcoin BTC
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-advCash.png"))
+										.give-and-receive__item-txt
+											p AdvCash USD
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-Ethereum.png"))
+										.give-and-receive__item-txt
+											p Ethereum ETH
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-perfectmoney.png"))
+										.give-and-receive__item-txt
+											p Perfect Money USD
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-WebMoney.png"))
+										.give-and-receive__item-txt
+											p Webmoney USD
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-Litecoin.png"))
+										.give-and-receive__item-txt
+											p Litecoin LTC
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-Dash.png"))
+										.give-and-receive__item-txt
+											p Dash DASH
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-qiwi-rub.png"))
+										.give-and-receive__item-txt
+											p QIWI RUB
+										.give-and-receive__item-quantity.
+											100
+							.give-and-receive__receive
+								.give-and-receive__receive-filter
+									button.active Все
+									button USD
+									button BTC
+									button DASH
+									button ETH
+									button LTC
+								.give-and-receive__title
+									span ВЫ ПОЛУЧАЕТЕ
+								.give-and-receive__receive-items
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-bitcoin.png"))
+										.give-and-receive__item-txt
+											p Bitcoin BTC
+										.give-and-receive__item-quantity.
+											263032.01
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-alfa.png"))
+										.give-and-receive__item-txt
+											p АльфаБанк RUB
+										.give-and-receive__item-quantity.
+											258563.34
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-sber.png"))
+										.give-and-receive__item-txt
+											p Сбербанк RUB
+										.give-and-receive__item-quantity.
+											258563.34
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-tinkof.png"))
+										.give-and-receive__item-txt
+											p ТинькоффБанк RUB
+										.give-and-receive__item-quantity.
+											258563.34
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-visa.png"))
+										.give-and-receive__item-txt
+											p Visa/MasterCard RUB
+										.give-and-receive__item-quantity.
+											3424234234242.35
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-swift.png"))
+										.give-and-receive__item-txt
+											p WIRE USD
+										.give-and-receive__item-quantity.
+											12342442.2344
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-BTB.png"))
+										.give-and-receive__item-txt
+											p ВТБ24 RUB
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-perfectmoney.png"))
+										.give-and-receive__item-txt
+											p Perfect Money USD
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-yandex.png"))
+										.give-and-receive__item-txt
+											p Яндекс.Деньги RUB
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-WebMoney.png"))
+										.give-and-receive__item-txt
+											p Webmoney USD
+										.give-and-receive__item-quantity.
+											1
+										.give-and-receive__item-divider
+											.give-and-receive__item-divider-inner
+									.give-and-receive__item
+										.give-and-receive__item-img
+											img(src=require("../../img/betatransfer-advCash.png"))
+										.give-and-receive__item-txt
+											p AdvCash USD
+										.give-and-receive__item-quantity.
+											100
+
+						.reviews
+							.title-h2
+								h2 ОТЗЫВЫ
+								.title-h2__divider
+									.title-h2__divider-inner
+							.reviews-items
+								.reviews-item
+									.reviews-item__message
+										p
+											| Благодарю за скорость! Все очень быстро.
+									.reviews-item__author-and-time
+										p Сергей,
+											time
+												| 10.10.2017, 14:20
+								.reviews-item
+									.reviews-item__message
+										p
+											| Менял $ на ВТС. По времени чуть более часа.
+											| Это считаю довольно оперативно. Большое
+											| спасибо. Всем рекомендую этот обменник.
+									.reviews-item__author-and-time
+										p Сергей,
+											time
+												| 10.10.2017, 14:20
+							.reviews__button
+								button.main_btn Все отзывы
+						.news
+							.title-h2
+								h2 НОВОСТИ
+								.title-h2__divider
+									.title-h2__divider-inner
+							.news-items
+								.news-item
+									.news-item__date
+										time
+											| 18.01.2017
+									.news-item__message
+										p
+											| Сколько можно заработать в интерне-
+											| те на обмене электронных валют?
+										a(href="#") Читать дальше
+											i.fa.fa-long-arrow-right
+								.news-item
+									.news-item__date
+										time
+											| 18.01.2017
+									.news-item__message
+										p
+											| Обналичить QIWI? Это просто!
+										a(href="#") Читать дальше
+											i.fa.fa-long-arrow-right
+							.news__button
+								button.main_btn Все новости
+				.col-3
+					aside.aside
+						.currency-reserves
+							.give-and-receive__title.aside-title
+								span Резервы валюты
+							.swiper-container.currency-reserves__slider
+								.swiper-wrapper
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-WebMoney.png"))
+											.currency-reserves__slider-item-txt
+												p Webmoney USD
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-qiwi-rub.png"))
+											.currency-reserves__slider-item-txt
+												p QIWI RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-sber.png"))
+											.currency-reserves__slider-item-txt
+												p Сбербанк RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-alfa.png"))
+											.currency-reserves__slider-item-txt
+												p АльфаБанк RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-tinkof.png"))
+											.currency-reserves__slider-item-txt
+												p ТинькоффБанк RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-BTB.png"))
+											.currency-reserves__slider-item-txt
+												p ВТБ24 RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-visa.png"))
+											.currency-reserves__slider-item-txt
+												p Visa/MasterCard RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-yandex.png"))
+											.currency-reserves__slider-item-txt
+												p Яндекс.Деньги RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-advCash.png"))
+											.currency-reserves__slider-item-txt
+												p AdvCash USD
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-bitcoin.png"))
+											.currency-reserves__slider-item-txt
+												p Bitcoin BTC
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-perfectmoney.png"))
+											.currency-reserves__slider-item-txt
+												p Perfect Money USD
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-Ethereum.png"))
+											.currency-reserves__slider-item-txt
+												p Ethereum ETH
+												p 101.7
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-privat.png"))
+											.currency-reserves__slider-item-txt
+												p Приват24 UAH
+												p 101.7
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+							.currency-reserves__slider-navigation
+								p Посмотреть ещё
+								.swiper-button-next
+									i.fa.fa-long-arrow-down
+								.swiper-button-prev
+									i.fa.fa-long-arrow-up
+						.last-exchange
+							.title-h2
+								h2 ПОСЛЕДНИЙ ОБМЕН
+								.title-h2__divider
+									.title-h2__divider-inner
+							.last-exchange__item
+								.last-exchange__time
+									time 11.10.2017, 10:35
+								.last-exchange__give
+
+								.last-exchange__divider
+								.last-exchange__receive
+
+
+
+
 
 

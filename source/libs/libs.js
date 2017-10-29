@@ -62,8 +62,5 @@ exports.sticky = function () {
 	return require("../libs/jquery.sticky");
 };
 
-exports.owl_carousel = function () {
-	return require("../libs/owl.carousel.min");
-};
 
 
