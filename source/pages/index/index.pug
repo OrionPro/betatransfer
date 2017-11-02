@@ -26,10 +26,11 @@ block main
 								img(src=require("../../img/betatransfer-is__item-img3.png"))
 						.betatransfer-is__item-txt
 							p Отзывчивая онлайн поддержка
+	// Секция betatransfer основная
 	section.betatransfer
 		.container
 			.row
-				.col-lg-9
+				.col-12.col-xl-9
 					main.main
 						.give-and-receive
 							.give-and-receive__give
@@ -276,7 +277,7 @@ block main
 											i.fa.fa-long-arrow-right
 							.news__button
 								button.main_btn Все новости
-				.col-3
+				.col-12.col-xl-3
 					aside.aside
 						.currency-reserves
 							.give-and-receive__title.aside-title
@@ -413,13 +414,92 @@ block main
 							.last-exchange__item
 								.last-exchange__time
 									time 11.10.2017, 10:35
-								.last-exchange__give
-
+								.last-exchange__inner
+									.last-exchange__img
+										img(src=require("../../img/betatransfer-WebMoney.png"))
+									.last-exchange__amount
+										p 128
+										p USD
 								.last-exchange__divider
-								.last-exchange__receive
-
-
-
-
-
-
+									i.fa.fa-long-arrow-down
+								.last-exchange__inner
+									.last-exchange__img
+										img(src=require("../../img/betatransfer-bitcoin.png"))
+									.last-exchange__amount
+										p 0.023296
+										p BTC
+	// Секция our-partners
+	section.our-partners
+		.container
+			.our-partners__inner
+				.title-h2
+					h2 НАШИ ПАРТНЕРЫ
+					.title-h2__divider
+						.title-h2__divider-inner
+			.swiper-container.our-partners__slider
+				.swiper-wrapper
+					.swiper-slide
+						.our-partners__slider-item
+							img(class="img-fluid" src=require("../../img/our-partners__slider-item-img.jpg"))
+					.swiper-slide
+						.our-partners__slider-item
+							img(class="img-fluid" src=require("../../img/our-partners__slider-item-img.jpg"))
+					.swiper-slide
+						.our-partners__slider-item
+							img(class="img-fluid" src=require("../../img/our-partners__slider-item-img.jpg"))
+					.swiper-slide
+						.our-partners__slider-item
+							img(class="img-fluid" src=require("../../img/our-partners__slider-item-img.jpg"))
+					.swiper-slide
+						.our-partners__slider-item
+							img(class="img-fluid" src=require("../../img/our-partners__slider-item-img.jpg"))
+			.our-partners__slider-navigation
+				.swiper-button-prev
+					i.fa.fa-long-arrow-left
+				.swiper-button-next
+					i.fa.fa-long-arrow-right
+	// Секция .profitable-and-fast
+	section.profitable-and-fast
+		.container
+			.profitable-and-fast__inner
+				.title-h2
+					h2 BETATRANSFER.NET - ВЫГОДНЫЙ И БЫСТРЫЙ ОБМЕННИК КРИПТОВАЛЮТЫ
+					.title-h2__divider
+						.title-h2__divider-inner
+				.profitable-and-fast__txt-wrap
+					p
+						| Большинство Интернет-юзеров уже давно привыкли осуществлять покупки в online-режиме. Это не удивительно: так удобнее, проще и
+						| быстрее. Вместе с тем нужно отметить, что порою у покупателя отсутствуют финансовые средства на счету той платёжной системе, которой
+						| пользуется человек или магазин, продающий нужный ему товар. В таком случае лучше всего обратиться за помощью в
+						b  обменник
+						|  электронных валют.
+					p
+						| Betatransfer предлагает своим клиентам
+						b  обмен
+						|  валют по самому выгодному курсу. Удовлетворение клиентов важнее всего для нашего
+						| сервиса. А наши клиенты всегда довольны обменом за счёт небольшой комиссии и оперативности при проведении обменных операций.
+						| В Betatransfer вы можете осуществлять финансовые переводы и обмены на таких платежных системах, как: Webmoney, Qiwi AdvCash, а также
+						| криптовалюты
+						b  Биткоин
+						|  и
+						b  Эфириум
+						|  на банковские счета и карты Сбербанка,
+						| Альфа-Банка, и Тинькофф.
+					p
+						| Плюсы пользования нашим сервисом очевидны. Мы предлагаем клиентам только самый оптимальный курс при обмене валют. Наша
+						| главная задача состоит в том, чтобы создать такой сервис, который будет популярен и востребован на протяжении длительного периода
+						| времени. Для того, чтобы эта цель была возможной, следует заработать репутацию самого выгодного, честного и оперативного обменника.
+						| Вот почему наши курсы и комиссии такие низкие.
+					p
+						| Betatransfer работает с многими известными и востребованными валютами и системами Интернет-платежей. К примеру, если вы
+						| нуждаетесь
+						b  в обменнике Биткоин или Эфириум
+						|  , мы всегда. готовы оказать вам услуги по конвертации криптовалюты.
+					P
+						| Мы не можем не похвастаться нашей визитной карточкой: небывалой оперативностью. Ваша заявка будет рассмотрена сразу же, как
+						| только поступит, а деньги придут на ваш счет в течение получаса после оплаты. С целью повышения удобства пользования нашим сервисом
+						| мы создали также калькулятор, позволяющий высчитать курсы обмены валют. Чтобы узнать, какую сумму вы получите после совершения
+						| операции, нужно лишь ввести ту сумму, которую вы отдаёте. После этого вы сразу же получите ту цифру, которая поступит на ваш счёт после
+						| обмена, а также размер комиссионного платежа за наши услуги.
+				.profitable-and-fast__video
+					iframe(width="770" height="434" src="https://www.youtube.com/embed/21zwCpahD5M" frameborder="0" allowfullscreen="")

@@ -366,7 +366,7 @@ label
 .nav-line
 	display: block
 	height: 3px
-	background: #fff
+	background: darken($main_color, 10%)
 	position: absolute
 	left: 0
 	width: 100%
@@ -443,6 +443,9 @@ label
 	transition: transform 0.4s
 	overflow: auto
 	-webkit-overflow-scrolling: touch
+	background-color: darken(#3e3e3e, 10%)
+	padding-top: 30px
+	padding-left: 30px
 [off-canvas*=left]
 	width: 255px
 [canvas=container]
@@ -479,6 +482,10 @@ nav[canvas]
 			padding: 0
 			display: block
 			list-style: none
+			li
+				margin-bottom: 20px
+				a
+					color: #fff
 
 // Header
 .header
@@ -650,6 +657,10 @@ nav[canvas]
 			border: 2px solid transparent
 			background-color: #ff9600
 			color: #fff
+// секция .betatransfer
+.betatransfer
+	background-color: #f0f0f0
+	padding-bottom: 40px
 // блок give-and-receive
 .give-and-receive
 	display: flex
@@ -838,120 +849,47 @@ nav[canvas]
 			width: 70px
 			height: 100%
 			background-color: #2dc0bf
-// блок .reviews
-.reviews
-	padding-top: 35px
-	padding-left: 20px
-	padding-bottom: 40px
-	margin-bottom: 40px
-	background-color: #fff
-	border: 0.4px solid #dddddd
-.reviews__button
-	text-align: center
-.reviews-items
-	display: flex
-	margin-bottom: 40px
-.reviews-item
-	margin-right: 32px
-	&:last-of-type
-		margin-right: 0
-.reviews-item__message
-	width: 400px
-	height: 80px
-	margin-bottom: 15px
-	padding: 10px 10px 5px 20px
-	background-color: #f2f2f2
-	border-radius: 5px
-	position: relative
-	&:after
-		@include css-triangle(#f2f2f2,down,10px)
-		bottom: -10px
-	p
-		height: 58px
-		overflow: hidden
-		line-height: 1.2
-.reviews-item__author-and-time
-	p
-		@include font($main_txt_color, 18, $font_OpenSansSemiBold, 1.2)
-		time
-			@include font($main_txt_color, 18, $font_OpenSansRegular, 1.2)
-// блок .reviews
-.news
-	padding-top: 35px
-	padding-left: 20px
-	padding-bottom: 40px
-	margin-bottom: 40px
-	background-color: #fff
-	border: 0.4px solid #dddddd
-.news__button
-	text-align: center
-.news-items
-	display: flex
-	margin-bottom: 40px
-.news-item
-	width: 400px
-	height: 108px
-	display: flex
-	margin-right: 32px
-	padding-bottom: 15px
-	background-color: #f2f2f2
-	&:last-of-type
-		margin-right: 0
-.news-item__date
-	width: 60px
-	height: 60px
-	margin-right: 20px
-	display: flex
-	align-items: center
-	justify-content: center
-	background: $main_color
-	word-break: break-all
-	time
-		text-align: center
-		@include font(#fff, 18, $font_OpenSansSemiBold, 1.2)
-.news-item__message
-	width: 310px
-	padding-top: 15px
-	display: flex
-	flex-direction: column
-	p
-		height: 38px
-		overflow: hidden
-		line-height: 1.2
-		margin-bottom: auto
-	a
-		display: inline-table
-		color: $main_color
-		text-decoration: underline
-		&:hover i
-			transform: translateX(10px)
-		&:hover
-			text-decoration: none
-		&:active
-			text-decoration: none
-		&:focus
-			text-decoration: none
-
-		i
-			margin-left: 5px
-			transition: 0.5s
-			transform: translatex(0px)
 // Блок .aside
 .aside
 	margin-top: 44px
 // Секция .last-exchange
 .last-exchange
+	min-height: 362px
 	padding: 35px 20px 40px
 	background-color: #fff
 	border: 0.4px solid #dddddd
 	.title-h2
 		margin-bottom: 20px
+.last-exchange__item
+	margin-bottom: 20px
+	&:last-of-type
+		margin-bottom: 0
 .last-exchange__time
 	height: 37px
 	line-height: 37px
+	margin-bottom: 20px
 	padding-left: 20px
 	background-color: #f2f2f2
 	border-radius: 5px
+.last-exchange__inner
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	margin-bottom: 20px
+	&:last-of-type
+		margin-bottom: 0
+.last-exchange__img
+	margin-right: 10px
+.last-exchange__amount
+	p
+		line-height: 1.2
+.last-exchange__divider
+	width: 40px
+	margin-bottom: 15px
+	text-align: center
+	i
+		@include fz(22)
+
 // Пример checkbox
 label.check, label.radio
 	display: inline-flex
@@ -977,23 +915,136 @@ label.check, label.radio
 				display: none
 			&.fa-2
 				display: inline-flex
-
 	
 //	Секция 
-//	Секция
-//	Секция
-//	Секция 
-//	Секция 
-//	Секция
-//	Секция
-
 
 // Секия footer 
 .footer
-	background-color: #333
-	height: 200px
-	flex: 0 0 auto
+	padding-top: 40px
+	background-color: #3e3e3e
+	position: relative
+	ul
+		li
+			color: #fff
+			@include fz(14)
+			span
+				font-family: $font_OpenSansLight
+.footer__footer-top
+	border-bottom: 0.4px solid #4c4c4c
+	.row
+		justify-content: center
+.footer__footer-bottom
+	padding-top: 22.5px
+	padding-bottom: 22.5px
+	color: #fff
+.footer__copyright
+	text-align: center
+	p
+		&+p
+			float: right
+			margin-top: -25px
+	a
+		color: inherit
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		
+.footer__nav
+	ul.menu
+		li
+			color: #fff
+			font-family: $font_OpenSansLight
+			margin-bottom: 5px
+			i
+				color: $main_color
+				margin-right: 10px
+			a
+				color: inherit
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+				&:active
+					text-decoration: underline
+				&:focus
+					text-decoration: underline
+.footer__schedule
+	p
+		@include fz(14)
+		color: #ffffff
+		i
+			margin-right: 5px
+			color: $main_color
+.footer__contacts
+	p
+		@include fz(14)
+		color: #ffffff
+		i
+			margin-right: 5px
+			color: $main_color
+	ul
+		li
+			a
+				font-family: $font_OpenSansLight
+				color: $main_color
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
 
-
-
-
+.footer__social
+	color: #fff
+	p
+		margin-bottom: 5px
+.footer__social-items
+	display: flex
+	margin-bottom: 15px
+.footer__social-item
+	width: 43px
+	height: 41px
+	margin-right: 10px
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	opacity: 1
+	transition: 0.5s
+	&:last-of-type
+		margin-right: 0
+	&:hover
+		text-decoration: none
+		opacity: 0.8
+	&:active
+		text-decoration: none
+	&:focus
+		text-decoration: none
+	&.vk
+		background-color: #4f6589
+	&.fb
+		background-color: #445797
+	&.g-plus
+		background-color: #a43614
+	&.tw
+		background-color: #60aaed
+	i
+		color: #fff
+		font-size: 22px
+.footer__social-will-share
+	margin-bottom: 15px
+.footer__btn-up
+	position: absolute
+	right: 0
+	top: 30%
+	i
+		font-size: 30px
+		color: $main_color
+		transform: translateY(0)
+		transition: transform 0.5s
+		&:hover
+			transform: translateY(-3px)

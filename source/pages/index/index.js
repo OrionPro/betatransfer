@@ -29,17 +29,49 @@ $(document).ready(function () {
 		});
 	}
 	// инициализация swiper слайдера
-	var swiper = new Swiper('.swiper-container', {
+	var swiper = new Swiper('.currency-reserves__slider', {
 		slidesPerView: 10,
 		spaceBetween: 0,
 		direction: 'vertical',
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.currency-reserves__slider .swiper-pagination',
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.currency-reserves__slider-navigation .swiper-button-next',
+			prevEl: '.currency-reserves__slider-navigation .swiper-button-prev',
 		},
+	});
+
+	var swiperOurPartners = new Swiper('.our-partners__slider', {
+		slidesPerView: 'auto',
+		slidesPerView: 4,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.our-partners__slider-navigation .swiper-button-next',
+			prevEl: '.our-partners__slider-navigation .swiper-button-prev',
+		},
+		breakpoints: {
+		1200: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+		992: {
+			slidesPerView: 2,
+				spaceBetween: 30,
+		},
+		768: {
+			slidesPerView: 1,
+				spaceBetween: 30,
+		},
+		640: {
+			slidesPerView: 1,
+				spaceBetween: 20,
+		},
+		320: {
+			slidesPerView: 1,
+				spaceBetween: 10,
+		}
+	}
 	});
 	// инициализация select2
 	$(".select2").select2({

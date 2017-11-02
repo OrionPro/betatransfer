@@ -56,7 +56,7 @@ html(class="no-js" lang="ru")
 
 		div(canvas='container')
 			block header
-				header(class="header")
+				header(class="header" id="header")
 					.container
 						.header__top
 							.header__top-description
@@ -92,10 +92,84 @@ html(class="no-js" lang="ru")
 			block footer
 				// Секция footer
 				footer.footer
+					.container
+						.footer__footer-top
+							.row
+								.col-xl-2.col-lg-4
+									nav.footer__nav
+										ul.menu
+											-var obj1 = [{title:'Предупреждение', href:'#'},{title:'Правила сайта', href:'#'},{title:'Контакты', href:'#'},{title:'Карта сайта', href:'#'}];
+											each i in obj1
+												li
+													i.fa.fa-angle-double-right
+													a(href=i.href)= i.title
+								.col-xl-3.col-lg-4
+									.footer__schedule
+										p
+											i.fa.fa-clock-o
+											| График работы:
+										ul
+											li
+												| Пн. — Пт.
+												span  с 9:00 до 02:00 по мск.
+											li
+												| Сб. — Вск.
+												span  свободный график.
+								.col-xl-3.col-lg-4
+									.footer__contacts
+										p
+											i.fa.fa-address-book
+											| Контакты:
+										ul
+											li
+												| e-mail:
+												a(href="mailto:betatransfer@yandex.ru")  betatransfer@yandex.ru
+											li
+												| skype:
+												a(href="skype:betatransfer?call")  betatransfer
+											li
+												| jabber:
+												a(href="mailto:betatransfer@xmpp.jp")  betatransfer@xmpp.jp
+
+								.col-12.col-lg-4.col-xl-4
+									.footer__social
+										p Мы в социальных сетях:
+										.footer__social-items
+											a(href="#" class="footer__social-item vk")
+												i.fa.fa-vk
+											a(href="#" class="footer__social-item fb")
+												i.fa.fa-facebook
+											a(href="#" class="footer__social-item g-plus")
+												i.fa.fa-google-plus
+											a(href="#" class="footer__social-item tw")
+												i.fa.fa-twitter
+										p Поделиться в социальных сетях:
+										.footer__social-will-share
+											script(type="text/javascript").
+												(function() {
+												if (window.pluso)if (typeof window.pluso.start == "function") return;
+												if (window.ifpluso == undefined) { window.ifpluso = 1;
+													var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+													s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+													s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+													var h=d[g]('body')[0];
+													h.appendChild(s);
+												}})();
+											.pluso( data-background="transparent" data-options="big,round,line,horizontal,counter,theme=04" data-services="facebook,twitter,odnoklassniki,tumblr")
+						.footer__footer-bottom
+							.footer__copyright
+								p 2017 Betatransfer.net - Сервис обмена электронных валют
+								p
+									| Дизайн сайта:
+									a(href="#")  a-bozhenko.ru
+
+						.footer__btn-up
+							a(href="#header")
+								i.fa.fa-chevron-circle-up
 		div(off-canvas='id-1 left shift')
 			nav.header_nav_mobile
 				ul.menu
-					-var obj1 = [{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 38 425 961 68', href:'tel:73842596168'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'Примеры', href:'#'}];
+					-var obj1 = [{title:'Правила обмена', href:'#'},{title:'Партнерам', href:'#'},{title:'Информация', href:'#'},{title:'Контакты', href:'#'}];
 					each i in obj1
 						li
 							a(href=i.href)= i.title

@@ -24,7 +24,23 @@
 			margin-bottom: 20px
 			.modal_form_input_wrap
 				display: inline-block
-
+	.last-exchange
+		margin-bottom: 40px
+	.give-and-receive__receive
+		width: 100%
+	.betatransfer-is
+		.betatransfer-is__item
+			margin-bottom: 20px
+	.news
+		margin-bottom: 0
+	.footer__social
+		text-align: center
+	.footer__social-items
+		align-items: center
+		justify-content: center
+	.footer__copyright p + p
+		float: none
+		margin-top: 0
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
@@ -37,6 +53,62 @@
 		margin-top: 40px
 	nav[canvas]
 		display: block
+	.header__top
+		padding-bottom: 10px
+		flex-direction: column
+	.header__top-authorization
+		margin-left: inherit
+		margin-bottom: 10px
+	.header__top-description
+		margin-bottom: 10px
+	.betatransfer-is
+		.betatransfer-is__items
+			padding-left: 20px
+			flex-direction: column
+			align-items: flex-start
+		.betatransfer-is__item
+			margin-right: 0
+			&:last-of-type
+				padding-bottom: 20px
+				margin-bottom: 0
+	.give-and-receive
+		flex-direction: column
+	.give-and-receive__give
+		width: 100%
+	.give-and-receive__give-items
+		margin-bottom: 40px
+	.reviews-items
+		flex-direction: column
+	.reviews-item
+		margin-bottom: 20px
+		margin-right: 20px
+		&:last-of-type
+			margin-right: 20px
+	.reviews-item__message
+		width: 100%
+	.news-items
+		flex-direction: column
+		padding-right: 20px
+	.news-item
+		width: 100%
+		margin-bottom: 20px
+	.news-item__message
+		width: 100%
+	html, body
+		font-size: 14px
+	.profitable-and-fast__video
+		iframe
+			width: 100%
+			height: 390px
+	.footer__nav
+		text-align: center
+		margin-bottom: 20px
+	.footer__schedule
+		text-align: center
+		margin-bottom: 20px
+	.footer__contacts
+		text-align: center
+		margin-bottom: 20px
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -60,7 +132,8 @@
 		-o-animation: none !important
 		-ms-animation: none !important
 		animation: none !important
-	
+	html, body
+		font-size: 13px
 	.header__title
 		h1
 			font-size: 30px
@@ -81,7 +154,14 @@
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
-
+	.header__top-description
+		width: 300px
+		text-align: center
+	.profitable-and-fast__video
+		iframe
+			height: 290px
+	.footer__btn-up
+		right: 20px
 // Extra small devices (portrait phones, less than 521px)
 @media only screen and (max-width : 520px)
 	/**/
@@ -94,6 +174,12 @@
 // Extra small devices (portrait phones, less than 481px)
 @media only screen and (max-width : 480px)
 	/**/
+	#nav-button-label
+		width: 40px
+	.header__top-authorization
+		flex-direction: column
+	.header__top-authorization-item
+		margin-right: 0
 	.our-advantages .our-advantages__item .our-advantages__img i
 		font-size: 37px
 	.header__title
@@ -105,7 +191,9 @@
 		.intermediate_title
 			h3
 				font-size: 20px
-
+	.profitable-and-fast__video
+		iframe
+			height: 240px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

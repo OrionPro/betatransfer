@@ -3,10 +3,11 @@
 // Секция betatransfer-is
 .betatransfer-is
 	padding-top: 40px
+	padding-bottom: 40px
+	background-color: #f0f0f0
 	.betatransfer-is-wrap
 		min-height: 142px
 		padding-top: 20px
-		margin-bottom: 40px
 		background-color: white
 		border: 0.4px solid #ddd
 		h1
@@ -58,6 +59,164 @@
 				width: 100%
 				height: 1px
 				border: 1px solid $main_bg_color
+// блок .reviews
+.reviews
+	padding-top: 35px
+	padding-left: 20px
+	padding-bottom: 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.reviews__button
+	text-align: center
+.reviews-items
+	display: flex
+	flex-wrap: wrap
+.reviews-item
+	margin-right: 32px
+	margin-bottom: 40px
+	&:nth-of-type(2n)
+		margin-right: 0
+.reviews-item__message
+	width: 400px
+	height: 80px
+	margin-bottom: 15px
+	padding: 10px 10px 5px 20px
+	background-color: #f2f2f2
+	border-radius: 5px
+	position: relative
+	&:after
+		@include css-triangle(#f2f2f2,down,10px)
+		bottom: -10px
+	p
+		height: 58px
+		overflow: hidden
+		line-height: 1.2
+.reviews-item__author-and-time
+	p
+		@include font($main_txt_color, 18, $font_OpenSansSemiBold, 1.2)
+		time
+			@include font($main_txt_color, 18, $font_OpenSansRegular, 1.2)
+// блок .reviews
+.news
+	padding-top: 35px
+	padding-left: 20px
+	padding-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.news__button
+	text-align: center
+.news-items
+	display: flex
+	flex-wrap: wrap
+.news-item
+	width: 400px
+	height: 108px
+	display: flex
+	margin-right: 32px
+	margin-bottom: 40px
+	padding-bottom: 15px
+	background-color: #f2f2f2
+	&:nth-of-type(2n)
+		margin-right: 0
+.news-item__date
+	width: 60px
+	height: 60px
+	margin-right: 20px
+	display: flex
+	align-items: center
+	justify-content: center
+	background: $main_color
+	word-break: break-all
+	time
+		text-align: center
+		@include font(#fff, 18, $font_OpenSansSemiBold, 1.2)
+.news-item__message
+	width: 310px
+	padding-top: 15px
+	display: flex
+	flex-direction: column
+	p
+		height: 38px
+		overflow: hidden
+		line-height: 1.2
+		margin-bottom: auto
+	a
+		display: inline-table
+		color: $main_color
+		text-decoration: underline
+		&:hover i
+			transform: translateX(10px)
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
 
+		i
+			margin-left: 5px
+			transition: 0.5s
+			transform: translatex(0px)
+// Секция .our-partners
+.our-partners
+	padding-bottom: 40px
+	background-color: #f0f0f0
+	.title-h2
+		margin-bottom: 0
+		padding-bottom: 40px
+.our-partners__inner
+	padding: 35px 20px 0
+	background-color: #fff
+	border: 0.4px solid #dddddd
+	border-bottom: none
+.our-partners__slider
+	background-color: #fff
+	padding-bottom: 40px
+	border: 0.4px solid #dddddd
+	border-top: none
+	border-bottom: none
+	.our-partners__slider-item
+		display: flex
+		justify-content: center
+		align-items: center
+.our-partners__slider-navigation
+	background-color: #fff
+	padding-bottom: 30px
+	border: 0.4px solid #dddddd
+	border-top: none
+	text-align: center
+	.swiper-button-next, .swiper-button-prev
+		display: inline-block
+		position: relative
+		background-image: none
+		width: inherit
+		height: inherit
+		top: inherit
+		left: inherit
+		right: inherit
+		margin: 0
+		user-select: none
+		i
+			user-select: none
+			color: $main_color
+	.swiper-button-prev
+		margin-right: 30px
+// Сеция .profitable-and-fast
+.profitable-and-fast
+	background-color: #f0f0f0
+	padding-bottom: 40px
+.profitable-and-fast__inner
+	padding: 35px 20px 40px 20px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.profitable-and-fast__txt-wrap
+	p
+		margin-bottom: 15px
+	b
+		font-family: $font_OpenSansSemiBold
+		font-weight: inherit
+.profitable-and-fast__video
+	text-align: center
 // media
 @import '../../sass/_media.sass'
