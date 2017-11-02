@@ -28,19 +28,6 @@ $(document).ready(function () {
 			theme: 'tooltipster-light'
 		});
 	}
-	// инициализация swiper слайдера
-	var swiper = new Swiper('.currency-reserves__slider', {
-		slidesPerView: 10,
-		spaceBetween: 0,
-		direction: 'vertical',
-		pagination: {
-			el: '.currency-reserves__slider .swiper-pagination',
-		},
-		navigation: {
-			nextEl: '.currency-reserves__slider-navigation .swiper-button-next',
-			prevEl: '.currency-reserves__slider-navigation .swiper-button-prev',
-		},
-	});
 
 	var swiperOurPartners = new Swiper('.our-partners__slider', {
 		slidesPerView: 'auto',
