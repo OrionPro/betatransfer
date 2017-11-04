@@ -5,12 +5,71 @@ block main
 	// Секция betatransfer основная
 	section.betatransfer
 		.container
+			.all-title
+				h1 АВТОРИЗАЦИЯ
+				.all-title__bread-crumbs
+					ul
+						li <<
+							a(href="#")  Главная
 			.row
 				.col-12.col-xl-9
 					main.main
-
+						.authorization__title
+							span АВТОРИЗАЦИЯ
+						.authorization__wrap
+							form
+								.authorization__item-input
+									label(for="authorization-login-mail")
+										| Логин или е-mail
+										span  *
+										| :
+									input(id="authorization-login-mail" type="text")
+								.authorization__item-input
+									label(for="authorization-password")
+										| Пароль
+										span  *
+										| :
+									input(id="authorization-password" type="password")
+								.authorization__links
+									.authorization__links-item
+										i.fa.fa-lock
+										a(href="#") Регистрация
+									.authorization__links-item
+										i.fa.fa-unlock-alt
+										a(href="#") Забыли пароль?
+								button(type="submit" class="main_btn") Войти
 				.col-12.col-xl-3
-					aside.aside
+					aside.aside.all-page
+						.aside-authorization.authorization
+							.give-and-receive__title.aside-title
+								span Авторизация
+							.aside-authorization__form
+								form
+									.aside-authorization__input
+										label(for="aside-login-email")
+											| Логин или e-mail
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-login-email" name="email" type="text")
+									.aside-authorization__input
+										label(for="aside-authorization-password")
+											| Пароль
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-authorization-password" name="name" type="password")
+									.aside-authorization__links
+										.aside-authorization__link
+											i.fa.fa-lock
+											a(href="#") Регистрация
+										.aside-authorization__link
+											i.fa.fa-unlock-alt
+											a(href="#") Забыли пароль?
+									.aside-authorization__button
+										button(class="main_btn" type="submit") Войти
 						.currency-reserves
 							.give-and-receive__title.aside-title
 								span Резервы валюты

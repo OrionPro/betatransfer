@@ -1,6 +1,6 @@
 
 import common from '../../js/common';
-
+import '../../pages/login/login.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import './login.sass';
 
 $(document).ready( function() {

@@ -41,6 +41,13 @@
 	.footer__copyright p + p
 		float: none
 		margin-top: 0
+	.authorization__item-input
+		width: 100%
+	.aside-authorization
+		&.authorization
+			display: none
+	.registration__item-input
+		width: 100%
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
@@ -49,6 +56,7 @@
 	.header__logo
 		display: block
 		margin-top: 0
+		margin-bottom: 0
 	.header__modal
 		margin-top: 40px
 	nav[canvas]
@@ -109,6 +117,19 @@
 	.footer__contacts
 		text-align: center
 		margin-bottom: 20px
+	.contact-technical-support__info-item
+		&:nth-of-type(3n)
+			margin-right: 30px
+		&:nth-of-type(2n)
+			margin-right: 0
+	.we-are-in-social-networks__item
+		width: 50%
+		margin-right: 0
+		margin-bottom: 20px
+		&:first-of-type
+			width: 50%
+		a
+			line-height: 3
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -142,15 +163,27 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
-	.react
-		h2
-			font-size: 20px
 	.file_wrap
 		input
 			width: 80%
 	.white-popup
 		textarea
 			min-height: 80px
+	.contact-technical-support__info
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		p
+			padding-left: 0
+	.contact-technical-support__info-item
+		margin-right: 0
+		text-align: center
+		&:nth-of-type(3n)
+			margin-right: 0
+		&:nth-of-type(2n)
+			margin-right: 0
+		a
+			padding-left: 0
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
@@ -194,6 +227,14 @@
 	.profitable-and-fast__video
 		iframe
 			height: 240px
+	.contact-technical-support__info-item.service3
+		width: 100%
+	.we-are-in-social-networks__items
+		align-items: center
+		justify-content: center
+		flex-direction: column
+	.we-are-in-social-networks__item
+		width: 50%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

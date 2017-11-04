@@ -4,7 +4,7 @@ import common from '../../js/common';
 import './contacts.sass';
 
 $(document).ready( function() {
-
+	$("body").addClass("index ink-transition");
 });
 
 $(window).resize(function() {

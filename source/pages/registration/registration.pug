@@ -5,12 +5,91 @@ block main
 	// Секция betatransfer основная
 	section.betatransfer
 		.container
+			.all-title
+				h1 Регистрация
+				.all-title__bread-crumbs
+					ul
+						li <<
+							a(href="#")  Главная
 			.row
 				.col-12.col-xl-9
 					main.main
+						.registration__title
+							span Регистрация
+						.registration__wrap
+							.registration__info
+								i.fa.fa-info-circle
+								p
+									| Пожалуйста, внимательно и аккуратно заполните все поля регистрационной формы. На указанный вами e-mail
+									| будет выслано уведомление о регистрации.
+							form
+								.registration__item-input
+									label(for="registration-login")
+										| Логин
+										span  *
+										| :
+									input(id="registration-login" name="name" type="text")
+								.registration__item-input
+									label(for="registration-mail")
+										| Логин или е-mail
+										span  *
+										| :
+									input(id="registration-mail" name="name" type="text")
+								.registration__item-input
+									label(for="registration-password")
+										| Пароль
+										span  *
+										| :
+									input(id="registration-password" name="name" type="password")
+								.registration__item-input
+									label(for="registration-password-again")
+										| Пароль снова
+										span  *
+										| :
+									input(id="registration-password-again" name="name" type="password")
+								.registration__type-answer
+									p Введите ответ
+									.registration__type-answer-input
+										span.task 4
+										span +
+										span.task 0
+										span.
+											=
+										input(type="text")
+									a(href="#" class="change-task") Изменить задачу
 
 				.col-12.col-xl-3
-					aside.aside
+					aside.aside.all-page
+						.aside-authorization
+							.give-and-receive__title.aside-title
+								span Авторизация
+							.aside-authorization__form
+								form
+									.aside-authorization__input
+										label(for="aside-login-email")
+											| Логин или e-mail
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-login-email" name="email" type="text")
+									.aside-authorization__input
+										label(for="aside-authorization-password")
+											| Пароль
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-authorization-password" name="name" type="password")
+									.aside-authorization__links
+										.aside-authorization__link
+											i.fa.fa-lock
+											a(href="#") Регистрация
+										.aside-authorization__link
+											i.fa.fa-unlock-alt
+											a(href="#") Забыли пароль?
+									.aside-authorization__button
+										button(class="main_btn" type="submit") Войти
 						.currency-reserves
 							.give-and-receive__title.aside-title
 								span Резервы валюты

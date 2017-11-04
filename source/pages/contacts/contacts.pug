@@ -8,15 +8,144 @@ block main
 			.all-title
 				h1 Контакты
 				.all-title__bread-crumbs
+					ul
+						li <<
+							a(href="#")  Главная
 			.row
 				.col-12.col-xl-9
 					main.main
-						.title-h2
-							h2 ТЕХНИЧЕСКАЯ ПОДДЕРЖКА
-							.title-h2__divider
-								.title-h2__divider-inner
+						.contact-technical-support
+							.title-h2
+								h2 ТЕХНИЧЕСКАЯ ПОДДЕРЖКА
+								.title-h2__divider
+									.title-h2__divider-inner
+							.contact-technical-support__info
+								.contact-technical-support__info-item
+									.contact-technical-support__info-item-title
+										i.fa.fa-clock-o
+										span Время работы:
+									p c 9:00 до 02:00 по МСК
+								.contact-technical-support__info-item
+									.contact-technical-support__info-item-title
+										i.fa.fa-envelope-o
+										span Поддержка по почте:
+									a(href="mailto:betatransfer@yandex.ru")  betatransfer@yandex.ru
+								.contact-technical-support__info-item
+									.contact-technical-support__info-item-title
+										i.fa.fa-envelope-o
+										span Чат онлайн:
+									a(href="#")  Открыть чат сейчас
+								.contact-technical-support__info-item
+									.contact-technical-support__info-item-title
+										i.fa.fa-envelope-o
+										span Поддержка ч-з jabber:
+									a(href="mailto:betatransfer@xmpp.jp")  betatransfer@xmpp.jp
+								.contact-technical-support__info-item
+									.contact-technical-support__info-item-title
+										i.fa.fa-envelope-o
+										span Поддержка ч-з скайп:
+									a(href="skype:betatransfer?call")  betatransfer
+							.contact-technical-support__attention
+								.contact-technical-support__attention-title
+									i.fa.fa-info-circle
+									span ВНИМАНИЕ!
+									p.title
+										| Обмен проводим только через создание заявки на сайте. Через контакты обмены не производим!
+									p
+										| Если у Вас возникли вопросы технического или финансового плана, напишите нам и мы поможем Вам в решении
+										| вашего вопроса. Мы отвечаем на вопросы в течение 15-60 минут, в зависимости от загрузки сервиса.
+								p
+									| Также Вы можете создать тикет заполнив
+									a(href="#")  форму контактов
+							.reviews-about-the-service
+								.title-h2
+									h2 ОТЗЫВЫ О СЕРВИСЕ НА ФОРУМАХ
+									.title-h2__divider
+										.title-h2__divider-inner
+								.contact-technical-support__info
+									.contact-technical-support__info-item.service
+										.contact-technical-support__info-item-title
+											i.fa.fa-quote-left
+											span Отзывы на:
+										a(href="#")  bits.media
+									.contact-technical-support__info-item.service2
+										.contact-technical-support__info-item-title
+											i.fa.fa-quote-left
+											span Ознакомьтесь с отзывами на:
+										a(href="#")  bitcointalk.org
+									.contact-technical-support__info-item.service3
+										.contact-technical-support__info-item-title
+											i.fa.fa-quote-left
+											span Ознакомьтесь с отзывами и оставьте свой на:
+
+										a(href="#")  MMGP.ru
+								.contact-technical-support__attention.service
+									.contact-technical-support__attention-title
+										i.fa.fa-info-circle
+										span.title
+											| Нам очень важна Ваша поддержка и каждый ваш отзыв поможет нам становиться лучше!
+										p.title
+											| Спасибо, что выбрали нас!
+							.we-are-in-social-networks
+								.title-h2
+									h2 МЫ В СОЦИАЛЬНЫХ СЕТЯХ
+									.title-h2__divider
+										.title-h2__divider-inner
+								.we-are-in-social-networks__items
+									.we-are-in-social-networks__item
+										.we-are-in-social-networks__item-img.vk
+											i.fa.fa-vk
+										a(href="#")
+											| ВКонтакте
+									.we-are-in-social-networks__item
+										.we-are-in-social-networks__item-img.fb
+											i.fa.fa-facebook
+										a(href="#")
+											| Facebook
+									.we-are-in-social-networks__item
+										.we-are-in-social-networks__item-img.g-plus
+											i.fa.fa-google-plus
+										a(href="#")
+											| Google +
+									.we-are-in-social-networks__item
+										.we-are-in-social-networks__item-img.tw
+											i.fa.fa-twitter
+										a(href="#" )
+											| Twitter
+
+
 				.col-12.col-xl-3
 					aside.aside.all-page
+						.aside-authorization
+							.give-and-receive__title.aside-title
+								span Авторизация
+							.aside-authorization__form
+								form
+									.aside-authorization__input
+										label(for="aside-login-email")
+											| Логин или e-mail
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-login-email" name="email" type="text")
+									.aside-authorization__input
+										label(for="aside-authorization-password")
+											| Пароль
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-authorization-password" name="name" type="password")
+									.aside-authorization__links
+										.aside-authorization__link
+											i.fa.fa-lock
+											a(href="#") Регистрация
+										.aside-authorization__link
+											i.fa.fa-unlock-alt
+											a(href="#") Забыли пароль?
+									.aside-authorization__button
+										button(class="main_btn" type="submit") Войти
 						.currency-reserves
 							.give-and-receive__title.aside-title
 								span Резервы валюты

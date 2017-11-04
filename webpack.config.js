@@ -22,6 +22,8 @@ const common = merge([
 	{
 		entry: {
 			'index': PATHS.source + '/pages/index/index.js',
+			'login': PATHS.source + '/pages/login/login.js',
+			'registration': PATHS.source + '/pages/registration/registration.js',
 			'contacts': PATHS.source + '/pages/contacts/contacts.js'
 		},
 		output: {
