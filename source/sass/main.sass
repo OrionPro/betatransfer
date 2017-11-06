@@ -1,6 +1,6 @@
 @import "vars"
 // loads Libs SASS
-@import "animate"
+//@import "animate"
 @import "../libs/magnific-popup.css"
 @import "../libs/tooltipster-follower.min.css"
 @import "../libs/tooltipster.bundle.min.css"
@@ -8,7 +8,7 @@
 @import "../libs/font-awesome.min.css"
 @import "../libs/anim-modal.css"
 @import "../libs/slidebars.min.css"
-@import "../libs/select2.min.css"
+//@import "../libs/select2.min.css"
 @import "../libs/swiper.min.css"
 
 html
@@ -676,6 +676,9 @@ nav[canvas]
 		li
 			@include font($main_color, 18, $font_OpenSansLight, 1.2)
 			display: inline-block
+			margin-right: 10px
+			&:last-of-type
+				margin-right: 0
 			a
 				color: $main_color
 				transition: 0.5s
@@ -688,7 +691,8 @@ nav[canvas]
 				&:focus
 					color: $main_txt_color
 					text-decoration: none
-
+.no-indent
+	text-indent: 0 !important
 // секция .betatransfer
 .betatransfer
 	background-color: #f0f0f0
@@ -855,8 +859,10 @@ nav[canvas]
 	background-color: #fff
 	border: 0.4px solid #dddddd
 	margin-bottom: 40px
+	&.all-page
+		margin-bottom: 0
 .currency-reserves__slider
-	width: 99.9%
+	width: 99.5%
 	height: 803px
 	background-color: #ffffff
 .currency-reserves__slider-item

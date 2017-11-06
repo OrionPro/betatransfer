@@ -1,0 +1,93 @@
+@import "../../sass/vars.sass"
+
+
+.news-page
+	padding: 35px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #ddd
+.news-item
+	margin-bottom: 50px
+	&:last-of-type
+		margin-bottom: 25px
+.news-item__date-heading
+	display: flex
+	padding-bottom: 20px
+	border-bottom: .4px solid #eee
+	i
+		display: inline-block
+		vertical-align: middle
+		color: $main_color
+		font-size: 14px
+		margin-right: 2px
+.news-item__date
+	margin-right: 90px
+	time
+		display: inline-block
+		vertical-align: middle
+		@include font($main_txt_color, 14, $font_OpenSansLight, 1.2)
+.news-item__heading
+	@include font($main_txt_color, 14, $font_OpenSansLight, 1.2)
+	p
+		display: inline-block
+		vertical-align: middle
+
+.news-item__txt
+	padding-top: 20px
+	p
+		text-indent: 30px
+		margin-bottom: 10px
+		line-height: 1.2
+.news-item__txt-link
+	a
+		color: $main_color
+		font-size: 14px
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&:hover i
+			transform: translateX(10px)
+	i
+		margin-left: 10px
+		font-size: 16px
+		color: $main_color
+		transform: translateX(0)
+		transition: 0.5s
+.news__pagination
+	text-align: center
+	.pagination
+		li
+			display: inline-block
+			a
+				font-size: 14px
+				border-radius: 5px
+				background-color: $main_txt_color
+				color: #fff
+				padding: 3px 8.5px
+				text-decoration: none
+				transition: 0.5s
+				&.active
+					text-decoration: none
+					background-color: $main_color
+				&:hover
+					text-decoration: none
+					background-color: $main_color
+				&:active
+					text-decoration: none
+					background-color: $main_color
+				&:focus
+					text-decoration: none
+					background-color: $main_color
+			.ellipsis
+				font-size: 14px
+				padding: 3px 8.5px
+				background-color: #f2f2f2
+				color: $main_txt_color
+
+// media
+
+@import '../../sass/_media.sass'

@@ -1,12 +1,12 @@
 extends ../base
 block title
-	| registration page
+	| Blog page
 block main
 	// Секция betatransfer основная
 	section.betatransfer
 		.container
 			.all-title
-				h1 Регистрация
+				h1 ПАРТНЕРАМ
 				.all-title__bread-crumbs
 					ul
 						li <<
@@ -14,69 +14,39 @@ block main
 			.row
 				.col-12.col-xl-9
 					main.main
-						.registration__title
-							span Регистрация
-						.registration__wrap
-							.registration__info
-								i.fa.fa-info-circle
+						.partners-wrap
+							.partners-item
+								.partners-item__txt
+									h3 Реферальная программа для пользователей
+									p
+										i.fa.fa-info-circle
+										| Экономьте и зарабатывайте
+								.partners-item__img
+									img(src=require("../../img/partners-item__img.jpg"))
+							.partners-description
 								p
-									| Пожалуйста, внимательно и аккуратно заполните все поля регистрационной формы. На указанный вами e-mail
-									| будет выслано уведомление о регистрации.
-							form
-								.registration__item-input
-									label(for="registration-login")
-										| Логин
-										span  *
-										| :
-									input(id="registration-login" name="name" type="text")
-								.registration__item-input
-									label(for="registration-mail")
-										| Логин или е-mail
-										span  *
-										| :
-									input(id="registration-mail" name="name" type="text")
-								.registration__item-input
-									label(for="registration-password")
-										| Пароль
-										span  *
-										| :
-									input(id="registration-password" name="name" type="password")
-								.registration__item-input
-									label(for="registration-password-again")
-										| Пароль снова
-										span  *
-										| :
-									input(id="registration-password-again" name="name" type="password")
-								.registration__type-answer
-									p Введите ответ
-									.registration__type-answer-input
-										span.task 4
-										span +
-										span.task 0
-										span.
-											=
-										input(type="text")
-									a(href="#" class="change-task") Изменить задачу
-								.registration__with-the-rules-acquainted
-									label.check.noselect
-										input(type='checkbox')
-										i.fa.fa-1.fa-square-o
-										i.fa.fa-2.fa-check-square
-										span
-									span.service-rules
-										|  С
-										a(href="#")  правилами сервиса
-										|  ознакомлен и согласен
-								.registration__submit-btn
-									button(type="submit" class="main_btn") Регистрация
-									.registration__submit-authorization
-										i.fa.fa-user
-										a(href="#") Авторизация
-
-
+									| Хотите зарабатывать вместе с нами? Зарегистрируйтесь у нас на сайте и Вы сможете участвовать в
+									| нашей реферальной программе и накопительной системе скидок! После регистрации Вы получаете
+									| накопительную скидку на обмен.
+								a(href="#") Подробнее о реферальной системе
+							.partners-item
+								.partners-item__txt
+									h3 Для мониторингов
+									p
+										i.fa.fa-info-circle
+										| Зарабатывайте
+								.partners-item__img
+									img(src=require("../../img/partners-item__img2.jpg"))
+							.partners-connect-your-monitoring
+								p
+									| Приглашаем к сотрудничеству мониторинги обменников. Мы очень рады новым партнерам и готовы
+									| делиться прибылью.
+								p
+									| Зарегистрируйтесь у нас на сайте и Вы получите специальную реферальную ссылку.
+								button(class="main_btn" type="button") Подключить свой мониторинг
 				.col-12.col-xl-3
 					aside.aside.all-page
-						.aside-authorization
+						.aside-authorization.authorization
 							.give-and-receive__title.aside-title
 								span Авторизация
 							.aside-authorization__form

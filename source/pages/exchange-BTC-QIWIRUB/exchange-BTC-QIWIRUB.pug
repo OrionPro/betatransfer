@@ -1,0 +1,400 @@
+extends ../base
+block title
+	| registration page
+block main
+	// Секция betatransfer основная
+	section.betatransfer
+		.container
+			.all-title
+				h1 ВЫГОДНЫЙ КУРС И ОПЕРАТИВНЫЙ ОБМЕН БИТКОИНОВ НА КИВИ РУБЛИ
+				.all-title__bread-crumbs
+					ul
+						li <<
+							a(href="#")  Главная
+			.row
+				.col-12.col-xl-9
+					main.main
+						.exchange-BTC-QIWIRUB__attention
+							.title-h2
+								h2 ВНИМАНИЕ!
+								.title-h2__divider
+									.title-h2__divider-inner
+							p.attention-title
+								| Данная операция производится оператором в ручном режиме и занимает от 5 до 30 минут в
+								| рабочеевремя (см. статус оператора).
+							p
+								| Заявка действительна в течении 20 минут. Если оплата не приходит в указанное время, заявка будет
+								| отменена. В случае оплаты после истечения 20 минут, сервис оставляет за собой право завершить заявку
+								| по новому курсу, либо вернуть средства отправителю за вычетом комиссий платежной системы.
+							.exchange-BTC-QIWIRUB__divider
+								| — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+							p.attention-title.no-indent
+								| При обмене на кошельки не русских операторов связи, взымается дополнительная комиссия 1%.
+						form
+							.exchange-BTC-QIWIRUB__you.give
+								.registration__title
+									span ВЫ ОТДАЕТЕ
+							.exchange-BTC-QIWIRUB__you-wrap
+								.exchange-BTC-QIWIRUB__select-sum
+									.select
+										.slct_arrow
+											i.fa.fa-caret-down
+										a(href="#" class="slct")
+											span.slct_img_wrap
+												img(src=require("../../img/betatransfer-bitcoin.png"))
+											| Bitcoin BTC
+										ul.drop
+											li
+												span.slct_img_wrap
+													img(src=require("../../img/betatransfer-Ethereum.png"))
+												| Ethereum ETH
+											li
+												span.slct_img_wrap
+													img(src=require("../../img/betatransfer-advCash.png"))
+												| AdvCash USD
+
+										input(type="hidden" name="services")
+									.exchange-BTC-QIWIRUB__sum
+										label(for="exchange-BTC-QIWIRUB__sum-give")
+											| Сумма
+											span  *
+											| :
+										// здесь продуман класс warning при необходимости добавить
+										input(id="exchange-BTC-QIWIRUB__sum-give" name="1" type="text")
+							.exchange-BTC-QIWIRUB__you.are-getting
+								.registration__title
+									span ВЫ ПОЛУЧАЕТЕ
+							.exchange-BTC-QIWIRUB__you-wrap
+								.exchange-BTC-QIWIRUB__info
+									i.fa.fa-info-circle
+									span min.: 20000 RUB, max.: 72633.77 RUB
+								.exchange-BTC-QIWIRUB__select-sum.are-getting
+									.select
+										.slct_arrow
+											i.fa.fa-caret-down
+										a(href="#" class="slct")
+											span.slct_img_wrap
+												img(src=require("../../img/betatransfer-qiwi-rub.png"))
+											| QIWI RUB
+										ul.drop
+											li
+												span.slct_img_wrap
+													img(src=require("../../img/betatransfer-Ethereum.png"))
+												| Ethereum ETH
+											li
+												span.slct_img_wrap
+													img(src=require("../../img/betatransfer-advCash.png"))
+												| AdvCash USD
+
+										input(type="hidden" name="services")
+									.exchange-BTC-QIWIRUB__sum
+										label(for="exchange-BTC-QIWIRUB__sum-are-getting")
+											| Сумма
+											span  *
+											| :
+										// здесь продуман класс warning при необходимости добавить
+										input(id="exchange-BTC-QIWIRUB__sum-are-getting" name="1" type="text")
+										// вывел для примера, убрать приобычном использовании
+										span.warning-info max.: 326605.69 RUB
+								.registration__item-input.magrin-bottom
+									label(for="your-kiwi-wallet")
+										| Ваш QIWI кошелек
+										span  *
+										| :
+									input(id="your-kiwi-wallet" name="1" type="text")
+							.exchange-BTC-QIWIRUB__you.are-getting
+								.registration__title
+									span ЛИЧНЫЕ ДАННЫЕ
+							.exchange-BTC-QIWIRUB__you-wrap
+								.registration__item-input
+									label(for=".exchange-BTC-QIWIRUB-personal-data")
+										| E-mail
+										span  *
+										| :
+									input(id=".exchange-BTC-QIWIRUB-personal-data" name="1" type="text")
+								.registration__submit-btn
+									button(type="submit" class="main_btn") Обменять
+								.registration__with-the-rules-acquainted
+									label.check.noselect
+										input(type='checkbox')
+										i.fa.fa-1.fa-square-o
+										i.fa.fa-2.fa-check-square
+										span
+									span.service-rules
+										|  Запомнить введенные данные
+				.col-12.col-xl-3
+					aside.aside.all-page
+						.aside-authorization
+							.give-and-receive__title.aside-title
+								span Авторизация
+							.aside-authorization__form
+								form
+									.aside-authorization__input
+										label(for="aside-login-email")
+											| Логин или e-mail
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-login-email" name="email" type="text")
+									.aside-authorization__input
+										label(for="aside-authorization-password")
+											| Пароль
+											span  *
+											| :
+										.input_wrap
+											i.fa.fa-check
+											input(id="aside-authorization-password" name="name" type="password")
+									.aside-authorization__links
+										.aside-authorization__link
+											i.fa.fa-lock
+											a(href="#") Регистрация
+										.aside-authorization__link
+											i.fa.fa-unlock-alt
+											a(href="#") Забыли пароль?
+									.aside-authorization__button
+										button(class="main_btn" type="submit") Войти
+						.currency-reserves.all-page
+							.give-and-receive__title.aside-title
+								span Резервы валюты
+							.swiper-container.currency-reserves__slider
+								.swiper-wrapper
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-WebMoney.png"))
+											.currency-reserves__slider-item-txt
+												p Webmoney USD
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-qiwi-rub.png"))
+											.currency-reserves__slider-item-txt
+												p QIWI RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-sber.png"))
+											.currency-reserves__slider-item-txt
+												p Сбербанк RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-alfa.png"))
+											.currency-reserves__slider-item-txt
+												p АльфаБанк RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-tinkof.png"))
+											.currency-reserves__slider-item-txt
+												p ТинькоффБанк RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-BTB.png"))
+											.currency-reserves__slider-item-txt
+												p ВТБ24 RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-visa.png"))
+											.currency-reserves__slider-item-txt
+												p Visa/MasterCard RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-yandex.png"))
+											.currency-reserves__slider-item-txt
+												p Яндекс.Деньги RUB
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-advCash.png"))
+											.currency-reserves__slider-item-txt
+												p AdvCash USD
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-bitcoin.png"))
+											.currency-reserves__slider-item-txt
+												p Bitcoin BTC
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-perfectmoney.png"))
+											.currency-reserves__slider-item-txt
+												p Perfect Money USD
+												p 1013.7713
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-Ethereum.png"))
+											.currency-reserves__slider-item-txt
+												p Ethereum ETH
+												p 101.7
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+									.swiper-slide
+										.currency-reserves__slider-item
+											.currency-reserves__slider-item-img
+												img(src=require("../../img/betatransfer-privat.png"))
+											.currency-reserves__slider-item-txt
+												p Приват24 UAH
+												p 101.7
+											.currency-reserves__slider-item-divider
+												.currency-reserves__slider-item-divider-inner
+							.currency-reserves__slider-navigation
+								p Посмотреть ещё
+								.swiper-button-next
+									i.fa.fa-long-arrow-down
+								.swiper-button-prev
+									i.fa.fa-long-arrow-up
+	section.reviews-section
+		.container
+			.reviews-block
+				.title-h2
+					h2 ОТЗЫВЫ
+					.title-h2__divider
+						.title-h2__divider-inner
+				.reviews-block__items
+					.reviews-block__item
+						.reviews-block__item-txt
+							p
+								| Благодарю за скорость! Все очень быстро.
+						.reviews-block__author-and-time
+							p Сергей,
+								time 10.10.2017, 14:20
+					.reviews-block__item
+						.reviews-block__item-txt
+							p
+								| Менял $ на ВТС. По времени чуть более часа. Это считаю довольно оперативно. Большое спасибо.
+								| Всем рекомендую этот обменник.
+						.reviews-block__author-and-time
+							p Aleksandr,
+								time 10.10.2017, 14:20
+				.news__pagination
+					ul.pagination
+						li
+							a(href="#" class="active") 1
+						li
+							a(href="#") 2
+						li
+							a(href="#") 3
+						li
+							span(class="ellipsis") ...
+						li
+							a(href="#") 20
+						li
+							a(href="#") 21
+						li
+							a(href="#")
+								i.fa.fa-long-arrow-right
+						li
+							a(href="#") Последняя
+			.registration__title
+				span ОПУБЛИКОВАТЬ ОТЗЫВ
+			.registration__wrap
+				form
+					.exchange-BTC-QIWIRUB__input-wrap
+						.registration__item-input
+							label(for="reviews-name")
+								| Ваше имя
+								span  *
+								| :
+							input(id="reviews-name" name="name" type="text")
+						.registration__item-input
+							label(for="registration-password")
+								| Ваш e-mail
+								span  *
+								| :
+							input(id="registration-password" name="name" type="password")
+					.registration__item-input.width-full
+						label(for="reviews-textarea")
+							| Текст отзыва
+							span  *
+							| :
+						textarea(id="reviews-textarea" name="reviews-textarea")
+					.registration__type-answer
+						p Введите ответ
+						.registration__type-answer-input
+							span.task 4
+							span +
+							span.task 0
+							span.
+								=
+							input(type="text")
+						a(href="#" class="change-task") Изменить задачу
+					.registration__submit-btn
+						button(type="submit" class="main_btn") Оставить отзыв
+			.registration__wrap
+				.title-h2
+					h2 ВЫГОДНЫЙ КУРС И ОПЕРАТИВНЫЙ ОБМЕН БИТКОИНОВ НА КИВИ РУБЛИ
+					.title-h2__divider
+						.title-h2__divider-inner
+				.exchange-BTC-QIWIRUB-profitable-course
+					p
+						| Ещё буквально лет десять назад лишь единицы из числа наиболее просвещённых и заинтересованных знали о существовании
+						| криптовалют – электронных денег, созданных специально для сети Интернет. Тогда такие финансовые средства только лишь разрабатывались
+						| и стоили относительно дешёво. Сегодня же многие криптовалюты уже оцениваются в целые состояния и цена их будет расти и дальше,
+						| уверены эксперты. Это связано с повсеместной глобализацией и повальным внедрением Интернета во все сферы общественной жизни.
+						| На сегодняшний день главной проблемой криптовалют является зачастую совершенно невыгодный и грабительский обменный курс. Мы же
+						| работаем совершенно по-другому.
+					p
+						| Только у нас вы можете обменять биткоины на киви кошелек по наиболее выгодному из возможных в отечественном сегменте Всемирной
+						| Сети курсов. Мы всегда гарантируем нашим клиентам только лучшие обменные курсы с минимумом комиссий. Для того, чтобы произвести
+						| обмен биткоин на киви по выгодному курсу, вам не нужно проходить длительные процедуры регистрации, платить непонятные сборы и стоять
+						| в электронных очередях. Достаточно заполнить простую форму на нашем сайте, подать и оплатить заявку, после чего дождаться, пока наш
+						| оператор произведёт обмен (обычно ждать приходится не более двадцати-тридцати минут).
+					p
+						| Мы работаем семь дней в неделю, с десяти утра до трёх ночи. При этом на нашем сервисе постоянно функционирует техподдержка,
+						| сотрудники которой готовы в любой момент оказать вам помощь или ответить на возникшие вопросы. Нашим постоянным клиентам мы
+						| предлагаем гибкую систему приятных бонусов и скидок. Однако самое главное наше преимущество – это обмен Bitcoin на QIWI по самому
+						| выгодному курсу Рунета.
+					p.title
+						| Для обмена Вам необходимо выполнить несколько шагов:
+					ul
+						li
+							| - Заполните все поля представленной формы. Нажмите кнопку «Обменять».
+						li
+							| - Ознакомьтесь с условиями договора на оказание услуг обмена, если вы принимаете их, поставьте галочку в соответствующем поле и
+							| нажмите кнопку «Создать заявку».
+						li
+							| - Оплатите заявку.  Для этого следует совершить перевод необходимой суммы, следуя инструкциям на нашем сайте.
+						li
+							| - После выполнения указанных действий, система переместит Вас на страницу «Состояние заявки», где будет указан статус вашего
+							| перевода.
+					p
+						b Внимание:
+						|  для выполнения данной операции потребуется участие оператора (см. статус оператора).

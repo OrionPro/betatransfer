@@ -48,6 +48,8 @@
 			display: none
 	.registration__item-input
 		width: 100%
+	.registration__item-input.width-full
+		width: 100%
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
@@ -130,6 +132,28 @@
 			width: 50%
 		a
 			line-height: 3
+	.exchange-BTC-QIWIRUB__select-sum
+		flex-direction: column
+		&.after-registration-bid
+			align-items: flex-start
+		.select
+			width: 100%
+			margin-bottom: 20px
+			.slct
+				width: 100%
+	.exchange-BTC-QIWIRUB__sum
+		margin-left: inherit
+	.registration__item-input:first-of-type
+		margin-right: 50px
+	.partners-item
+		flex-direction: column-reverse
+	.partners-item__img
+		margin-bottom: 20px
+	.partners-item__txt
+		width: 100%
+	.exchange-BTC-QIWIRUB__txt
+		width: 100%
+		margin-bottom: 20px
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -184,6 +208,8 @@
 			margin-right: 0
 		a
 			padding-left: 0
+	.exchange-BTC-QIWIRUB__input-wrap
+		flex-direction: column
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
@@ -235,6 +261,58 @@
 		flex-direction: column
 	.we-are-in-social-networks__item
 		width: 50%
+	.registration__submit-btn
+		flex-direction: column
+		button
+			margin-bottom: 20px
+			margin-right: 0
+	.news-item__date-heading
+		flex-direction: column
+	.news-item__date
+		margin-right: 0
+		margin-bottom: 5px
+	.news__pagination
+		.pagination
+			li
+				a
+					font-size: 11px
+					padding: 3px 5.5px
+				.ellipsis
+					font-size: 11px
+					padding: 3px 5.5px
+	.news-inner-txt
+		ul
+			padding-left: 30px
+	.all-title
+		h1
+			padding-right: 10px
+			@include fz(24)
+			line-height: 1.1
+	.news-inner-txt
+		h3
+			margin-bottom: 8px
+			text-indent: 20px
+		p
+			padding-bottom: 10px
+			text-indent: 20px
+		ul
+			padding-left: 20px
+		img
+			margin-bottom: 20px
+	.exchange-BTC-QIWIRUB-profitable-course
+		p
+			margin-bottom: 10px
+			text-indent: 20px
+		ul
+			margin-bottom: 10px
+			li
+				text-indent: 20px
+	.partners-connect-your-monitoring
+		p
+			&:last-of-type
+				margin-bottom: 25px
+		button
+			width: 100%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

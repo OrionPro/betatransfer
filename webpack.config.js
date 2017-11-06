@@ -24,7 +24,15 @@ const common = merge([
 			'index': PATHS.source + '/pages/index/index.js',
 			'login': PATHS.source + '/pages/login/login.js',
 			'registration': PATHS.source + '/pages/registration/registration.js',
-			'contacts': PATHS.source + '/pages/contacts/contacts.js'
+			'contacts': PATHS.source + '/pages/contacts/contacts.js',
+			'news': PATHS.source + '/pages/news/news.js',
+			'news-inner': PATHS.source + '/pages/news-inner/news-inner.js',
+			'reviews': PATHS.source + '/pages/reviews/reviews.js',
+			'exchange-BTC-QIWIRUB': PATHS.source + '/pages/exchange-BTC-QIWIRUB/exchange-BTC-QIWIRUB.js',
+			'partners': PATHS.source + '/pages/partners/partners.js',
+			'static-page': PATHS.source + '/pages/static-page/static-page.js',
+			'after-registration-bid': PATHS.source + '/pages/after-registration-bid/after-registration-bid.js',
+			'after-payment-bid': PATHS.source + '/pages/after-payment-bid/after-payment-bid.js',
 		},
 		output: {
 			path: PATHS.build,
@@ -63,6 +71,46 @@ const common = merge([
 				filename: 'registration.html',
 				chunks: ['registration', 'common'],
 				template: PATHS.source + '/pages/registration/registration.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'news.html',
+				chunks: ['news', 'common'],
+				template: PATHS.source + '/pages/news/news.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'news-inner.html',
+				chunks: ['news-inner', 'common'],
+				template: PATHS.source + '/pages/news-inner/news-inner.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'reviews.html',
+				chunks: ['reviews', 'common'],
+				template: PATHS.source + '/pages/reviews/reviews.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'exchange-BTC-QIWIRUB.html',
+				chunks: ['exchange-BTC-QIWIRUB', 'common'],
+				template: PATHS.source + '/pages/exchange-BTC-QIWIRUB/exchange-BTC-QIWIRUB.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'partners.html',
+				chunks: ['partners', 'common'],
+				template: PATHS.source + '/pages/partners/partners.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'static-page.html',
+				chunks: ['static-page', 'common'],
+				template: PATHS.source + '/pages/static-page/static-page.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'after-registration-bid.html',
+				chunks: ['after-registration-bid', 'common'],
+				template: PATHS.source + '/pages/after-registration-bid/after-registration-bid.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'after-payment-bid.html',
+				chunks: ['after-payment-bid', 'common'],
+				template: PATHS.source + '/pages/after-payment-bid/after-payment-bid.pug'
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'

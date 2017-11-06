@@ -20,9 +20,9 @@ exports.magnific_popup = function () {
 	return require("magnific-popup");
 };
 
-exports.select2 = function () {
-	return require("select2");
-};
+// exports.select2 = function () {
+// 	return require("select2");
+// };
 
 exports.input_mask = function () {
 	return require("jquery-inputmask");
@@ -34,25 +34,25 @@ exports.jqueryui = function () {
 	return require("../libs/jquery-ui.min");
 };
 
-exports.greenSock = function () {
-	return require("../libs/greenSock");
-};
+// exports.greenSock = function () {
+// 	return require("../libs/greenSock");
+// };
 
-exports.DrawSVG = function () {
-	return require("../libs/DrawSVGPlugin");
-};
+// exports.DrawSVG = function () {
+// 	return require("../libs/DrawSVGPlugin");
+// };
 
 exports.matchMedia = function () {
 	return require("../libs/matchMedia");
 };
 
-exports.waypoint = function () {
-	return require("../libs/waypoints.min");
-};
+// exports.waypoint = function () {
+// 	return require("../libs/waypoints.min");
+// };
 
-exports.Animate_css = function () {
-	return require("../libs/Animate_css");
-};
+// exports.Animate_css = function () {
+// 	return require("../libs/Animate_css");
+// };
 
 exports.animate_modal_js = function () {
 	return require("../libs/anim-modal");

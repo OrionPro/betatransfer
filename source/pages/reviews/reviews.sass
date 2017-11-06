@@ -1,5 +1,62 @@
 @import "../../sass/vars.sass"
 
+.reviews-block
+	padding: 15px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.reviews-block__items
+	padding-top: 40px
+.reviews-block__item
+	margin-bottom: 40px
+.reviews-block__item-txt
+	min-height: 80px
+	background-color: #f2f2f2
+	border-radius: 4px
+	margin-bottom: 15px
+	padding: 10px 10px 10px 20px
+	position: relative
+	&:after
+		@include css-triangle(#f2f2f2,down,10px)
+		bottom: -10px
+		left: 10px
+	p
+		line-height: 1.2
+.reviews-block__author-and-time
+	p
+		@include font($main_txt_color, 18, $font_OpenSansSemiBold, 1.2)
+		time
+			font-family: $font_OpenSansRegular
+.news__pagination
+	text-align: center
+	.pagination
+		li
+			display: inline-block
+			a
+				font-size: 14px
+				border-radius: 5px
+				background-color: $main_txt_color
+				color: #fff
+				padding: 3px 8.5px
+				text-decoration: none
+				transition: 0.5s
+				&.active
+					text-decoration: none
+					background-color: $main_color
+				&:hover
+					text-decoration: none
+					background-color: $main_color
+				&:active
+					text-decoration: none
+					background-color: $main_color
+				&:focus
+					text-decoration: none
+					background-color: $main_color
+			.ellipsis
+				font-size: 14px
+				padding: 3px 8.5px
+				background-color: #f2f2f2
+				color: $main_txt_color
 .registration__title
 	width: 100%
 	height: 50px
@@ -18,20 +75,6 @@
 	form
 		button
 			width: 240px
-.registration__info
-	display: flex
-	font-size: 14px
-	padding-bottom: 20px
-	margin-bottom: 20px
-	border-bottom: 0.4px solid #eeeeee
-	i
-		color: $main_color
-		margin-right: 5px
-		position: relative
-		top: 2px
-	p
-		font-family: $font_OpenSansSemiBold
-		line-height: 1.2
 .registration__item-input
 	width: 450px
 	margin-bottom: 15px
@@ -56,9 +99,26 @@
 		&:focus
 			outline: 0
 			border: 0.5px solid $main_color
-
+	textarea
+		width: 100%
+		height: 150px
+		padding-top: 15px
+		padding-left: 20px
+		font-size: 18px
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+		transition: border 0.5s
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+			border: 0.5px solid $main_color
+		&:focus
+			outline: 0
+			border: 0.5px solid $main_color
 .registration__type-answer
-	margin-bottom: 20px
+	margin-bottom: 30px
 	p
 		margin-bottom: 5px
 	.change-task
@@ -80,8 +140,6 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		font-size: 25px
-		color: #4f8aeb
 		border: 0.5px solid #e0e0e0
 		border-radius: 5px
 	span
@@ -103,28 +161,7 @@
 		&:focus
 			outline: 0
 			border: 0.5px solid $main_color
-.registration__with-the-rules-acquainted
-	display: flex
-	align-items: center
-	margin-bottom: 35px
-	label.check
-		margin-right: 8px
-		margin-bottom: 0
-		color: $main_color
-		i
-			margin-right: 0
-	.service-rules
-		display: inline-block
-		vertical-align: middle
-		a
-			color: $main_color
-			text-decoration: underline
-			&:hover
-				text-decoration: none
-			&:active
-				text-decoration: none
-			&:focus
-				text-decoration: none
+
 .registration__submit-btn
 	display: flex
 	align-items: center

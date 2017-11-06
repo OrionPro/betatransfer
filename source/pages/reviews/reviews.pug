@@ -6,7 +6,7 @@ block main
 	section.betatransfer
 		.container
 			.all-title
-				h1 Регистрация
+				h1 ОТЗЫВЫ
 				.all-title__bread-crumbs
 					ul
 						li <<
@@ -14,39 +14,70 @@ block main
 			.row
 				.col-12.col-xl-9
 					main.main
+						.reviews-block
+							.reviews-block__items
+								.reviews-block__item
+									.reviews-block__item-txt
+										p
+											| Благодарю за скорость! Все очень быстро.
+									.reviews-block__author-and-time
+										p Сергей,
+											time 10.10.2017, 14:20
+								.reviews-block__item
+									.reviews-block__item-txt
+										p
+											| Менял $ на ВТС. По времени чуть более часа. Это считаю довольно оперативно. Большое спасибо.
+											| Всем рекомендую этот обменник.
+									.reviews-block__author-and-time
+										p Aleksandr,
+											time 10.10.2017, 14:20
+							.news__pagination
+								ul.pagination
+									li
+										a(href="#" class="active") 1
+									li
+										a(href="#") 2
+									li
+										a(href="#") 3
+									li
+										span(class="ellipsis") ...
+									li
+										a(href="#") 20
+									li
+										a(href="#") 21
+									li
+										a(href="#")
+											i.fa.fa-long-arrow-right
+									li
+										a(href="#") Последняя
 						.registration__title
-							span Регистрация
+							span ОПУБЛИКОВАТЬ ОТЗЫВ
 						.registration__wrap
-							.registration__info
-								i.fa.fa-info-circle
-								p
-									| Пожалуйста, внимательно и аккуратно заполните все поля регистрационной формы. На указанный вами e-mail
-									| будет выслано уведомление о регистрации.
 							form
 								.registration__item-input
-									label(for="registration-login")
-										| Логин
+									label(for="reviews-name")
+										| Ваше имя
 										span  *
 										| :
-									input(id="registration-login" name="name" type="text")
+									input(id="reviews-name" name="name" type="text")
 								.registration__item-input
-									label(for="registration-mail")
+									label(for="reviews-mail")
 										| Логин или е-mail
 										span  *
 										| :
-									input(id="registration-mail" name="name" type="text")
+									input(id="reviews-mail" name="name" type="text")
 								.registration__item-input
 									label(for="registration-password")
-										| Пароль
+										| Ваш e-mail
 										span  *
 										| :
 									input(id="registration-password" name="name" type="password")
 								.registration__item-input
-									label(for="registration-password-again")
-										| Пароль снова
+									label(for="reviews-textarea")
+										| Текст отзыва
 										span  *
 										| :
-									input(id="registration-password-again" name="name" type="password")
+									textarea(id="reviews-textarea" name="reviews-textarea")
 								.registration__type-answer
 									p Введите ответ
 									.registration__type-answer-input
@@ -57,21 +88,9 @@ block main
 											=
 										input(type="text")
 									a(href="#" class="change-task") Изменить задачу
-								.registration__with-the-rules-acquainted
-									label.check.noselect
-										input(type='checkbox')
-										i.fa.fa-1.fa-square-o
-										i.fa.fa-2.fa-check-square
-										span
-									span.service-rules
-										|  С
-										a(href="#")  правилами сервиса
-										|  ознакомлен и согласен
 								.registration__submit-btn
-									button(type="submit" class="main_btn") Регистрация
-									.registration__submit-authorization
-										i.fa.fa-user
-										a(href="#") Авторизация
+									button(type="submit" class="main_btn") Оставить отзыв
+
 
 
 				.col-12.col-xl-3

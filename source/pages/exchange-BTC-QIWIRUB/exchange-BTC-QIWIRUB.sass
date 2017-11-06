@@ -1,0 +1,371 @@
+@import "../../sass/vars.sass"
+
+.select
+	position: relative
+	text-align: left
+	display: inline-flex
+	.drop
+		width: 100%
+		max-height: 200px
+		overflow: auto
+		margin: 0 auto
+		padding: 0
+		border: 0.5px solid #e0e0e0
+		border-top: none
+		display: none
+		border-radius: 5px
+		position: absolute
+		background-color: #F4F4F4
+		top: 62px
+		left: 0
+		right: 0
+		z-index: 12
+		li
+			list-style: none
+			border-bottom: none
+			border-top: none
+			cursor: pointer
+			display: block
+			@include font($main_txt_color, 18, $font_OpenSansRegular, 1.2)
+			padding: 7px 15px 7px 10px
+			&:hover
+				background-color: rgba(0,0,0,0.2)
+				outline: 0
+			a
+				text-decoration: none
+	.slct
+		width: 450px
+		height: 62px
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+		padding-left: 10px
+		padding-right: 30px
+		display: block
+		@include font(#000, 16, $font_OpenSansRegular, 1.2)
+		line-height: 62px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		-o-text-overflow: ellipsis
+		text-decoration: none
+		position: relative
+		transition: color 1s
+		&.active
+			color: #000
+			background-color: #F4F4F4
+	.slct_img_wrap
+		max-width: 100%
+		width: 40px
+		text-align: center
+		display: inline-block
+		align-items: center
+		justify-content: center
+		margin-right: 15px
+	.slct_arrow
+		position: absolute
+		top: calc(50% - 12px)
+		right: 20px
+		cursor: pointer
+		.fa
+			@include fz(20)
+			color: $main_color
+			position: relative
+			z-index: 10
+			transition: 0.3s
+		&.active .fa
+			transform: rotate(180deg)
+.exchange-BTC-QIWIRUB__attention
+	padding: 35px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #ddd
+	p
+		text-indent: 30px
+		margin-bottom: 15px
+		line-height: 1.2
+	.attention-title
+		text-indent: 30px
+		font-family: $font_OpenSansSemiBold
+		line-height: 1.2
+.exchange-BTC-QIWIRUB__divider
+	white-space: nowrap
+	overflow: hidden
+	margin-bottom: 15px
+
+.exchange-BTC-QIWIRUB__select-sum
+	display: flex
+	align-items: center
+	&.are-getting
+		margin-bottom: 30px
+.exchange-BTC-QIWIRUB__you-wrap
+	background-color: #fff
+	border: 0.4px solid #dddddd
+	margin-bottom: 20px
+	padding: 20px
+.exchange-BTC-QIWIRUB__sum
+	margin-left: auto
+	position: relative
+	.warning-info
+		position: absolute
+		bottom: -20px
+		right: 20px
+		font-size: 12px
+		color: #ad2b2b
+	label
+		font-weight: normal
+		margin-right: 30px
+		i
+			color: #a60000
+	input
+		width: 150px
+		height: 62px
+		padding-left: 20px
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+		transition: border 0.5s
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+			border: 0.5px solid $main_color
+		&:focus
+			outline: 0
+			border: 0.5px solid $main_color
+		&.warning
+			border: 0.5px solid #a60000
+.exchange-BTC-QIWIRUB__info
+	padding-bottom: 20px
+	margin-bottom: 20px
+	font-size: 14px
+	border-bottom: 0.4px solid #eeeeee
+	i
+		color: $main_color
+		margin-right: 5px
+	span
+		@include font($main_txt_color, 14, $font_OpenSansSemiBold, 1.2)
+.reviews-block
+	padding: 35px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+.reviews-block__items
+	margin-bottom: 40px
+.reviews-block__item
+	margin-bottom: 40px
+	&:last-of-type
+		margin-bottom: 0
+.reviews-block__item-txt
+	min-height: 80px
+	background-color: #f2f2f2
+	border-radius: 4px
+	margin-bottom: 15px
+	padding: 10px 10px 10px 20px
+	position: relative
+	&:after
+		@include css-triangle(#f2f2f2,down,10px)
+		bottom: -10px
+		left: 10px
+	p
+		line-height: 1.2
+.reviews-block__author-and-time
+	p
+		@include font($main_txt_color, 18, $font_OpenSansSemiBold, 1.2)
+		time
+			font-family: $font_OpenSansRegular
+
+.news__pagination
+	text-align: center
+	.pagination
+		li
+			display: inline-block
+			a
+				font-size: 14px
+				border-radius: 5px
+				background-color: $main_txt_color
+				color: #fff
+				padding: 3px 8.5px
+				text-decoration: none
+				transition: 0.5s
+				&.active
+					text-decoration: none
+					background-color: $main_color
+				&:hover
+					text-decoration: none
+					background-color: $main_color
+				&:active
+					text-decoration: none
+					background-color: $main_color
+				&:focus
+					text-decoration: none
+					background-color: $main_color
+			.ellipsis
+				font-size: 14px
+				padding: 3px 8.5px
+				background-color: #f2f2f2
+				color: $main_txt_color
+
+.registration__title
+	width: 100%
+	height: 50px
+	padding-left: 20px
+	line-height: 50px
+	color: #fff
+	text-transform: uppercase
+	background-color: #2dc0bf
+	border: 1px solid #2dc0bf
+	border-radius: 5px 5px 0 0
+.registration__wrap
+	padding: 15px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+	form
+		button
+			width: 240px
+.exchange-BTC-QIWIRUB__input-wrap
+	display: flex
+.registration__item-input
+	width: 450px
+	margin-bottom: 15px
+	&:first-of-type
+		margin-right: 130px
+	&.width-full
+		width: 1030px
+	&.magrin-bottom
+		margin-bottom: 0
+	label
+		font-weight: normal
+		span
+			color: #a60000
+	input
+		width: 100%
+		height: 62px
+		padding-left: 20px
+		font-size: 18px
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+		transition: border 0.5s
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+			border: 0.5px solid $main_color
+		&:focus
+			outline: 0
+			border: 0.5px solid $main_color
+	textarea
+		width: 100%
+		height: 150px
+		padding-top: 15px
+		padding-left: 20px
+		font-size: 18px
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+		transition: border 0.5s
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+			border: 0.5px solid $main_color
+		&:focus
+			outline: 0
+			border: 0.5px solid $main_color
+.registration__type-answer
+	margin-bottom: 30px
+	p
+		margin-bottom: 5px
+	.change-task
+		color: $main_txt_color
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+.registration__type-answer-input
+	display: flex
+	align-items: center
+	margin-bottom: 15px
+	.task
+		width: 50px
+		height: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 25px
+		color: #4f8aeb
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+	span
+		padding-left: 5px
+		padding-right: 5px
+	input
+		width: 50px
+		height: 50px
+		text-align: center
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+		transition: 0.5s
+		&:hover
+			outline: 0
+		&:active
+			outline: 0
+			border: 0.5px solid $main_color
+		&:focus
+			outline: 0
+			border: 0.5px solid $main_color
+.registration__with-the-rules-acquainted
+	display: flex
+	align-items: center
+	margin-bottom: 35px
+	label.check
+		margin-right: 8px
+		margin-bottom: 0
+		color: $main_color
+		i
+			margin-right: 0
+	.service-rules
+		display: inline-block
+		vertical-align: middle
+		a
+			color: $main_color
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+.registration__submit-btn
+	display: flex
+	align-items: center
+	margin-bottom: 20px
+	button
+		width: 240px
+		margin-right: 40px
+
+.exchange-BTC-QIWIRUB-profitable-course
+	p
+		margin-bottom: 20px
+		text-indent: 30px
+		line-height: 1.2
+		b
+			font-family: $font_OpenSansSemiBold
+	.title
+		margin-bottom: 0
+		font-family: $font_OpenSansSemiBold
+	ul
+		margin-bottom: 20px
+		li
+			text-indent: 30px
+			line-height: 1.2
+// media
+
+@import '../../sass/_media.sass'
