@@ -38,7 +38,7 @@ block main
 	section.betatransfer
 		.container
 			.all-title
-				h1 ЛИЧНЫЙ КАБИНЕТ
+				h1 ВАШИ ОПЕРАЦИИ
 				.all-title__bread-crumbs
 					ul
 						li <<
@@ -46,71 +46,127 @@ block main
 			.row
 				.col-12.col-xl-9
 					main.main
-						.authorization__title
-							span ЛИЧНЫЕ ДАННЫЕ
-						.authorization__wrap
-							form
-								.authorization__item-input
-									label(for="personal-account-login")
-										| Логин :
-										span  *
-										| :
-									input(id="personal-account-login" type="text")
-								.authorization__item-input
-									label(for="personal-account-surname")
-										| Фамилия :
-										span  *
-										| :
-									input(id="personal-account-surname" type="text")
-								.authorization__item-input
-									label(for="personal-account-name")
-										| Имя :
-										span  *
-										| :
-									input(id="personal-account-name" type="text")
-								.authorization__item-input
-									label(for="personal-account-phone")
-										| Номер мобильного телефона :
-										span  *
-										| :
-									input(id="personal-account-phone" type="text")
-								.authorization__item-input
-									label(for="personal-account-skype")
-										| Skype :
-										span  *
-										| :
-									input(id="personal-account-skype" type="text")
-								.authorization__item-input
-									label(for="personal-account-email")
-										| E-mail :
-										span  *
-										| :
-									input(id="personal-account-email" type="text")
-								.authorization__item-input
-									label(for="personal-account-site")
-										| Сайт :
-										span  *
-										| :
-									input(id="personal-account-site" type="text")
-								.authorization__item-input
-									label(for="personal-account-passport")
-										| Номер паспорта :
-										span  *
-										| :
-									input(id="personal-account-passport" type="text")
-								.authorization__item-input
-									label(for="authorization-new-password")
-										| Новый пароль
-										span  *
-										| :
-									input(id="authorization-new-password" type="password")
-								.authorization__item-input
-									label(for="authorization-new-password-again")
-										| Новый пароль повторно
-										span  *
-										| :
-									input(id="authorization-new-password-again" type="password")
-								button(type="submit" class="main_btn") Сохранить
+						.your-operations__info
+							.your-operations__info-item
+								span Персональная скидка:
+								span.result 0.5%
+							.your-operations__info-item
+								span Обменов:
+								span.result 70
+							.your-operations__info-item
+								span Сумма обменов:
+								span.result 145051.726607999997 USD
+						span.your-operations-table-info Листайте
+							.fa.fa-long-arrow-right
+						.your-operations__table-wrap
+							table.your-operations-table
+								tbody
+									tr
+										th.your-operations-table_id ID
+										th.your-operations-table_data ДАТА
+										th.your-operations-table_exchange КУРС
+										th.your-operations-table_out ОТДАЁТЕ
+										th.your-operations-table_in ПОЛУЧАЕТЕ
+										th.your-operations-table_status СТАТУС
+									tr
+										td
+											| 5362
+										td
+											| 02.04.2017,
+											| 21:09
+										td
+											| 1 BTC
+											i.fa.fa-caret-right
+											b 60240
+											|  RUB
+										td
+											p 1.075
+											p Bitcoin BTC
+										td.your-operations-curs-in
+											p
+												b 65081.790000000001
+											p АльфаБанк RUB
+										td.your-operations-curs_status.success
+											span выполненная заявка
+									tr
+										td
+											| 5362
+										td
+											| 02.04.2017,
+											| 21:09
+										td
+											| 1 BTC
+											i.fa.fa-caret-right
+											b 60240
+											|  RUB
+										td
+											p 1.075
+											p Bitcoin BTC
+										td.your-operations-curs-in
+											p
+												b 65081.790000000001
+											p АльфаБанк RUB
+										td.your-operations-curs_status.delete
+											span выполненная заявка
+									tr
+										td
+											| 5362
+										td
+											| 02.04.2017,
+											| 21:09
+										td
+											| 1 BTC
+											i.fa.fa-caret-right
+											b 60240
+											|  RUB
+										td
+											p 1.075
+											p Bitcoin BTC
+										td.your-operations-curs-in
+											p
+												b 65081.790000000001
+											p АльфаБанк RUB
+										td.your-operations-curs_status.success
+											span выполненная заявка
+									tr
+										td
+											| 5362
+										td
+											| 02.04.2017,
+											| 21:09
+										td
+											| 1 BTC
+											i.fa.fa-caret-right
+											b 60240
+											|  RUB
+										td
+											p 1.075
+											p Bitcoin BTC
+										td.your-operations-curs-in
+											p
+												b 65081.790000000001
+											p АльфаБанк RUB
+										td.your-operations-curs_status.success
+											span выполненная заявка
+							.news__pagination
+								ul.pagination
+									li
+										a(href="#" class="active") 1
+									li
+										a(href="#") 2
+									li
+										a(href="#") 3
+									li
+										span(class="ellipsis") ...
+									li
+										a(href="#") 20
+									li
+										a(href="#") 21
+									li
+										a(href="#")
+											i.fa.fa-long-arrow-right
+									li
+										a(href="#") Последняя
 				.col-12.col-xl-3
 					aside.aside.all-page
 						.aside-personal-account
@@ -124,7 +180,7 @@ block main
 										| 0.5%
 								nav.aside-personal-account__nav
 									ul
-										-var links = [{title:'Личный кабинет', href:'#', activeClass:'active'},{title:'Настройка безопасности', href:'#'},{title:'Ваши счета', href:'#'},{title:'Внутренний счет', href:'#'},{title:'Ваши операции', href:'#'},{title:'XML-файл курсов', href:'#'},{title:'TXT-файл курсов', href:'#'},{title:'Партнерский аккаунт', href:'#'},{title:'Рекламные материалы', href:'#'},{title:'Партнерские переходы', href:'#'},{title:'Партнерские обмены', href:'#'},{title:'Рефералы', href:'#'},{title:'Вывод партнерских средств', href:'#'},{title:'Партнерский FAQ', href:'#'},{title:'Условия участия в партнерской программе', href:'#'}];
+										-var links = [{title:'Личный кабинет', href:'#'},{title:'Настройка безопасности', href:'#'},{title:'Ваши счета', href:'#'},{title:'Внутренний счет', href:'#'},{title:'Ваши операции', href:'#', activeClass:'active'},{title:'XML-файл курсов', href:'#'},{title:'TXT-файл курсов', href:'#'},{title:'Партнерский аккаунт', href:'#'},{title:'Рекламные материалы', href:'#'},{title:'Партнерские переходы', href:'#'},{title:'Партнерские обмены', href:'#'},{title:'Рефералы', href:'#'},{title:'Вывод партнерских средств', href:'#'},{title:'Партнерский FAQ', href:'#'},{title:'Условия участия в партнерской программе', href:'#'}];
 										each i in links
 											li
 												a(href=i.href class=i.activeClass)= i.title

@@ -1,0 +1,107 @@
+@import "../../sass/vars.sass"
+
+.your-operations__info
+	padding: 0 20px 15px 20px
+	background-color: #fff
+	margin-bottom: 40px
+	border: 0.4px solid #dddddd
+.your-operations__info-item
+	display: flex
+	@include fz(18)
+	padding-top: 16px
+	padding-bottom: 16px
+	border-bottom: 0.4px solid #eee
+	.result
+		margin-left: auto
+.your-operations-table-info
+	display: none
+	color: $main_txt_color
+	margin-top: -20px
+.your-operations__table-wrap
+	margin-bottom: 40px
+	position: relative
+	background-color: #fff
+	padding-bottom: 40px
+.your-operations-table
+	width: 100%
+	@include fz(14)
+	background: #fff
+	margin-bottom: 40px
+	tr
+		i
+			font-size: 14px
+			color: $main_color
+		th
+			color: #fff
+			background-color: $main_color
+			font-weight: normal
+			padding-top: 12.5px
+			padding-bottom: 12.5px
+			&:first-of-type
+				padding-left: 20px
+				border-top-left-radius: 5px
+			&:last-of-type
+				border-top-right-radius: 5px
+		td
+			font-weight: normal
+			padding-top: 19px
+			padding-bottom: 19px
+			padding-right: 25px
+			border-bottom: .4px solid #eee
+			line-height: 1.2
+			cursor: pointer
+			&:first-of-type
+				padding-left: 20px
+			b
+				font-family: $font_OpenSansSemiBold
+			i
+				padding-left: 5px
+				padding-right: 5px
+			p
+				line-height: 1.2
+		.your-operations-table_data
+			width: 80px
+		.your-operations-curs-in
+			@include fz(16)
+			b
+				font-family: $font_OpenSansSemiBold
+		.your-operations-curs_status
+			span
+				text-decoration: underline
+			&.success
+				color: #39ac00
+			&.delete
+				color: #960000
+.news__pagination
+	text-align: center
+	.pagination
+		li
+			display: inline-block
+			a
+				font-size: 14px
+				border-radius: 5px
+				background-color: $main_txt_color
+				color: #fff
+				padding: 3px 8.5px
+				text-decoration: none
+				transition: 0.5s
+				&.active
+					text-decoration: none
+					background-color: $main_color
+				&:hover
+					text-decoration: none
+					background-color: $main_color
+				&:active
+					text-decoration: none
+					background-color: $main_color
+				&:focus
+					text-decoration: none
+					background-color: $main_color
+			.ellipsis
+				font-size: 14px
+				padding: 3px 8.5px
+				background-color: #f2f2f2
+				color: $main_txt_color
+// media
+
+@import '../../sass/_media.sass'

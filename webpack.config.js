@@ -36,6 +36,7 @@ const common = merge([
 			'after-the-confirmation-bid': PATHS.source + '/pages/after-the-confirmation-bid/after-the-confirmation-bid.js',
 			'rates': PATHS.source + '/pages/rates/rates.js',
 			'personal-account': PATHS.source + '/pages/personal-account/personal-account.js',
+			'personal-account-your-operations': PATHS.source + '/pages/personal-account-your-operations/personal-account-your-operations.js',
 		},
 		output: {
 			path: PATHS.build,
@@ -129,6 +130,11 @@ const common = merge([
 				filename: 'personal-account.html',
 				chunks: ['personal-account', 'common'],
 				template: PATHS.source + '/pages/personal-account/personal-account.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-your-operations.html',
+				chunks: ['personal-account-your-operations', 'common'],
+				template: PATHS.source + '/pages/personal-account-your-operations/personal-account-your-operations.pug'
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'
