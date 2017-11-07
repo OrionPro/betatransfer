@@ -1,12 +1,44 @@
 extends ../base
 block title
-	| registration page
+	| Blog page
+block header
+	header(class="header" id="header")
+		.container
+			.header__top
+				.header__top-description
+					span BETATRANSFER.NET
+					| – БЫСТРЫЙ И ЛЕГКИЙ ОБМЕН ЭЛЕКТРОННЫХ И КРИПТОВАЛЮТ
+				.header__top-authorization
+					.header__top-authorization-item
+						i.fa.fa-user
+						a(href="#") 1241423425
+					.header__top-authorization-item
+						i.fa.fa-reply
+						a(href="#") Выйти
+				.select
+					.slct_arrow
+						i.fa.fa-angle-down
+					a(href="#" class="slct") RU
+					ul.drop
+						li EN
+						li UA
+						li RU
+			.row
+				.header__logo.col-lg-3
+					a(href="/" class="logo" title="Логотип").
+						logo
+				nav.header__nav
+					ul
+						-var links = [{title:'Правила обмена', href:'#'},{title:'Партнерам', href:'#'},{title:'Информация', href:'#'},{title:'Контакты', href:'#'}];
+						each i in links
+							li
+								a(href=i.href)= i.title
 block main
 	// Секция betatransfer основная
 	section.betatransfer
 		.container
 			.all-title
-				h1 ID ЗАЯВКИ 25343
+				h1 ЛИЧНЫЙ КАБИНЕТ
 				.all-title__bread-crumbs
 					ul
 						li <<
@@ -14,90 +46,50 @@ block main
 			.row
 				.col-12.col-xl-9
 					main.main
-						.exchange-BTC-QIWIRUB__attention
-							.title-h2
-								h2 ЗАЯВКА ВЫПОЛНЕНА
-								.title-h2__divider
-									.title-h2__divider-inner
-							p.after-payment-bid__accomplished
-								| Ваша заявка выполнена
-							p Благодарим за то, что воспользовались услугами нашего сервиса.
-
-							p Оставьте, пожалуйста, отзыв о работе нашего сервиса!
-							p
-								| Оставьте, пожалуйста, отзыв на
-								|
-								a(href="#") bestchange.ru.
-							.after-payment-bid__info-block
-								p
-									b Отдаете:
-									|
-									| 70 Perfect money USD,
-									|
-									b Со счета:
-									|
-									| U7872254
-								p
-									b Получаете:
-									|
-									| 3990 QIWI RUB,
-									|
-									b  Ваш QIWI кошелек:
-									|
-									|
-									span  +380995698472
-							.after-payment-bid__divider
-							.after-payment-bid__info-block
-								p
-									b Отдаете:
-									|
-									| 70 Perfect money USD,
-									|
-									b Со счета:
-									|
-									| U7872254
-								p
-									b Получаете:
-									|
-									| 3990 QIWI RUB,
-									|
-									b  Ваш QIWI кошелек:
-									|
-									|
-									span  +380995698472
+						.authorization__title
+							span ЛИЧНЫЕ ДАННЫЕ
+						.authorization__wrap
+							form
+								.authorization__item-input
+									label(for="authorization-login-mail")
+										| Логин или е-mail
+										span  *
+										| :
+									input(id="authorization-login-mail" type="text")
+								.authorization__item-input
+									label(for="authorization-password")
+										| Пароль
+										span  *
+										| :
+									input(id="authorization-password" type="password")
+								.authorization__links
+									.authorization__links-item
+										i.fa.fa-lock
+										a(href="#") Регистрация
+									.authorization__links-item
+										i.fa.fa-unlock-alt
+										a(href="#") Забыли пароль?
+								button(type="submit" class="main_btn") Войти
 				.col-12.col-xl-3
 					aside.aside.all-page
-						.aside-authorization
+						.aside-personal-account
 							.give-and-receive__title.aside-title
-								span Авторизация
-							.aside-authorization__form
-								form
-									.aside-authorization__input
-										label(for="aside-login-email")
-											| Логин или e-mail
-											span  *
-											| :
-										.input_wrap
-											i.fa.fa-check
-											input(id="aside-login-email" name="email" type="text")
-									.aside-authorization__input
-										label(for="aside-authorization-password")
-											| Пароль
-											span  *
-											| :
-										.input_wrap
-											i.fa.fa-check
-											input(id="aside-authorization-password" name="name" type="password")
-									.aside-authorization__links
-										.aside-authorization__link
-											i.fa.fa-lock
-											a(href="#") Регистрация
-										.aside-authorization__link
-											i.fa.fa-unlock-alt
-											a(href="#") Забыли пароль?
-									.aside-authorization__button
-										button(class="main_btn" type="submit") Войти
-						.currency-reserves.all-page
+								span Личный кабинет
+							.aside-personal-account__wrap
+								.aside-personal-account__your-discount
+									i.fa.fa-tag
+									span Ваша скидка
+									.your-discount
+										| 0.5%
+								nav.aside-personal-account__nav
+									ul
+										-var links = [{title:'Личный кабинет', href:'#', activeClass:'active'},{title:'Настройка безопасности', href:'#'},{title:'Ваши счета', href:'#'},{title:'Внутренний счет', href:'#'},{title:'Ваши операции', href:'#'},{title:'XML-файл курсов', href:'#'},{title:'TXT-файл курсов', href:'#'},{title:'Партнерский аккаунт', href:'#'},{title:'Рекламные материалы', href:'#'},{title:'Партнерские переходы', href:'#'},{title:'Партнерские обмены', href:'#'},{title:'Рефералы', href:'#'},{title:'Вывод партнерских средств', href:'#'},{title:'Партнерский FAQ', href:'#'},{title:'Условия участия в партнерской программе', href:'#'}];
+										each i in links
+											li
+												a(href=i.href class=i.activeClass)= i.title
+
+								button(type="button" class="main_btn") Выйти
+						.currency-reserves
 							.give-and-receive__title.aside-title
 								span Резервы валюты
 							.swiper-container.currency-reserves__slider

@@ -1,0 +1,61 @@
+@import "../../sass/vars.sass"
+
+.rates__title-mini
+	height: 25px
+	display: inline-flex
+	padding-left: 10px
+	padding-right: 10px
+	margin-bottom: 20px
+	background-color: #2dc0bf
+	border-radius: 5px
+	text-align: center
+	line-height: 25px
+	font-size: 14px
+	color: #fff
+	position: relative
+.rates__table-wrap
+	margin-bottom: 40px
+.table-info
+	display: none
+	position: absolute
+	left: 0
+	top: 22px
+	color: $main_txt_color
+.rates-table
+	width: 100%
+	@include fz(14)
+	background: #fff
+	tr
+		i
+			font-size: 14px
+			color: $main_color
+		th
+			color: #fff
+			background-color: $main_color
+			font-weight: normal
+			padding-top: 12.5px
+			padding-bottom: 12.5px
+			&:first-of-type
+				padding-left: 20px
+				border-top-left-radius: 5px
+			&:last-of-type
+				border-top-right-radius: 5px
+		td
+			font-weight: normal
+			padding-top: 28px
+			padding-bottom: 28px
+			border-bottom: .4px solid #eee
+			cursor: pointer
+			&:first-of-type
+				padding-left: 20px
+		.rates-curs_title_out
+			text-align: right
+		.rates-curs_arr
+			width: 60px
+			text-align: center
+		.rates-curs_title_in
+			@include fz(16)
+			font-family: $font_OpenSansSemiBold
+// media
+
+@import '../../sass/_media.sass'

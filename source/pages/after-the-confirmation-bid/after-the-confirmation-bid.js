@@ -1,7 +1,8 @@
 
 import common from '../../js/common';
 
-import './after-payment-bid.sass';
+
+import './after-the-confirmation-bid.sass';
 
 $(document).ready( function() {
 

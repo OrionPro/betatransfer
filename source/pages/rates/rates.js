@@ -1,7 +1,7 @@
 
 import common from '../../js/common';
 
-import './after-payment-bid.sass';
+import './rates.sass';
 
 $(document).ready( function() {
 

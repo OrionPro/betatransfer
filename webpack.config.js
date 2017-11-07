@@ -33,6 +33,9 @@ const common = merge([
 			'static-page': PATHS.source + '/pages/static-page/static-page.js',
 			'after-registration-bid': PATHS.source + '/pages/after-registration-bid/after-registration-bid.js',
 			'after-payment-bid': PATHS.source + '/pages/after-payment-bid/after-payment-bid.js',
+			'after-the-confirmation-bid': PATHS.source + '/pages/after-the-confirmation-bid/after-the-confirmation-bid.js',
+			'rates': PATHS.source + '/pages/rates/rates.js',
+			'personal-account': PATHS.source + '/pages/personal-account/personal-account.js',
 		},
 		output: {
 			path: PATHS.build,
@@ -111,6 +114,21 @@ const common = merge([
 				filename: 'after-payment-bid.html',
 				chunks: ['after-payment-bid', 'common'],
 				template: PATHS.source + '/pages/after-payment-bid/after-payment-bid.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'after-the-confirmation-bid.html',
+				chunks: ['after-the-confirmation-bid', 'common'],
+				template: PATHS.source + '/pages/after-the-confirmation-bid/after-the-confirmation-bid.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'rates.html',
+				chunks: ['rates', 'common'],
+				template: PATHS.source + '/pages/rates/rates.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account.html',
+				chunks: ['personal-account', 'common'],
+				template: PATHS.source + '/pages/personal-account/personal-account.pug'
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'

@@ -8,7 +8,7 @@
 	.after-payment-bid__accomplished
 		color: $main_color
 		line-height: 1.2
-	p
+	&>p
 		margin-bottom: 20px
 		a
 			color: $main_color
@@ -19,7 +19,29 @@
 				text-decoration: none
 			&:focus
 				text-decoration: none
-
+.after-payment-bid__info-block
+	background-color: #f2f2f2
+	margin-left: -19px
+	margin-right: -19px
+	margin-bottom: 20px
+	padding: 17px 20px
+	border-bottom: .4px solid #eee
+	@include fz(20)
+	&:last-of-type
+		margin-bottom: 0
+	p
+		line-height: 1.2
+		margin-bottom: 15px
+		&:last-of-type
+			margin-bottom: 0
+	b
+		font-family: $font_OpenSansBold
+	span
+		text-decoration: underline
+.after-payment-bid__divider
+	height: 1px
+	border-bottom: .4px solid #eee
+	margin-bottom: 20px
 // media
 
 @import '../../sass/_media.sass'

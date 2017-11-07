@@ -221,6 +221,12 @@
 			height: 290px
 	.footer__btn-up
 		right: 20px
+	.rates__table-wrap
+		overflow: auto
+		table
+			width: 550px
+	.table-info
+		display: block
 // Extra small devices (portrait phones, less than 521px)
 @media only screen and (max-width : 520px)
 	/**/
@@ -230,6 +236,7 @@
 	.white-popup
 		input[type=submit]
 			width: 100%
+
 // Extra small devices (portrait phones, less than 481px)
 @media only screen and (max-width : 480px)
 	/**/
@@ -313,6 +320,19 @@
 				margin-bottom: 25px
 		button
 			width: 100%
+	.after-registration-bid__attention
+		&+button
+			width: 100%
+	.after-payment-bid__btn-block
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		button
+			&:first-of-type
+				margin-right: 0
+				margin-bottom: 20px
+	.registration__with-the-rules-acquainted-title
+		align-items: flex-start
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
