@@ -37,6 +37,12 @@ const common = merge([
 			'rates': PATHS.source + '/pages/rates/rates.js',
 			'personal-account': PATHS.source + '/pages/personal-account/personal-account.js',
 			'personal-account-your-operations': PATHS.source + '/pages/personal-account-your-operations/personal-account-your-operations.js',
+			'personal-account-your-bills': PATHS.source + '/pages/personal-account-your-bills/personal-account-your-bills.js',
+			'personal-account-internal-bills': PATHS.source + '/pages/personal-account-internal-bills/personal-account-internal-bills.js',
+			'personal-account-partner-funds': PATHS.source + '/pages/personal-account-partner-funds/personal-account-partner-funds.js',
+			'personal-account-security-settings': PATHS.source + '/pages/personal-account-security-settings/personal-account-security-settings.js',
+			'personal-account-partnership-exchanges': PATHS.source + '/pages/personal-account-partnership-exchanges/personal-account-partnership-exchanges.js',
+			'personal-account-partnership-faq': PATHS.source + '/pages/personal-account-partnership-faq/personal-account-partnership-faq.js',
 		},
 		output: {
 			path: PATHS.build,
@@ -51,8 +57,7 @@ const common = merge([
 			alias: {
 				'sprite': path.resolve(__dirname, 'source/spritesmith/'),
 				'img': path.resolve(__dirname, 'source/img/'),
-				'fonts': path.resolve(__dirname, 'source/fonts/'),
-				'sass': path.resolve(__dirname, 'source/sass/')
+				'fonts': path.resolve(__dirname, 'source/fonts/')
 			}
 		},
 		plugins: [
@@ -135,6 +140,36 @@ const common = merge([
 				filename: 'personal-account-your-operations.html',
 				chunks: ['personal-account-your-operations', 'common'],
 				template: PATHS.source + '/pages/personal-account-your-operations/personal-account-your-operations.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-your-bills.html',
+				chunks: ['personal-account-your-bills', 'common'],
+				template: PATHS.source + '/pages/personal-account-your-bills/personal-account-your-bills.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-internal-bills.html',
+				chunks: ['personal-account-internal-bills', 'common'],
+				template: PATHS.source + '/pages/personal-account-internal-bills/personal-account-internal-bills.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-partner-funds.html',
+				chunks: ['personal-account-partner-funds', 'common'],
+				template: PATHS.source + '/pages/personal-account-partner-funds/personal-account-partner-funds.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-security-settings.html',
+				chunks: ['personal-account-security-settings', 'common'],
+				template: PATHS.source + '/pages/personal-account-security-settings/personal-account-security-settings.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-partnership-exchanges.html',
+				chunks: ['personal-account-partnership-exchanges', 'common'],
+				template: PATHS.source + '/pages/personal-account-partnership-exchanges/personal-account-partnership-exchanges.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-partnership-faq.html',
+				chunks: ['personal-account-partnership-faq', 'common'],
+				template: PATHS.source + '/pages/personal-account-partnership-faq/personal-account-partnership-faq.pug'
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'

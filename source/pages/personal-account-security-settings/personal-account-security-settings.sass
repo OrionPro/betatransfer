@@ -1,0 +1,108 @@
+@import "../../sass/vars.sass"
+
+.authorization__wrap
+	padding: 15px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 0.4px solid #dddddd
+	form
+		p
+			margin-bottom: 3px
+		button
+			width: 240px
+	i
+		font-size: 14px
+		color: $main_color
+.authorization__title
+	width: 100%
+	height: 50px
+	padding-left: 20px
+	line-height: 50px
+	color: #fff
+	text-transform: uppercase
+	background-color: #2dc0bf
+	border: 1px solid #2dc0bf
+	border-radius: 5px 5px 0 0
+
+.select
+	position: relative
+	text-align: left
+	display: inline-flex
+	margin-bottom: 20px
+	&.last
+		margin-bottom: 40px
+	.drop
+		width: 100%
+		max-height: 200px
+		overflow: auto
+		margin: 0 auto
+		padding: 0
+		border: 0.5px solid #e0e0e0
+		border-top: none
+		display: none
+		border-radius: 5px
+		position: absolute
+		background-color: #F4F4F4
+		top: 62px
+		left: 0
+		right: 0
+		z-index: 12
+		li
+			list-style: none
+			border-bottom: none
+			border-top: none
+			cursor: pointer
+			display: block
+			@include font($main_txt_color, 18, $font_OpenSansRegular, 1.2)
+			padding: 22.5px 15px 22.5px 10px
+			&:hover
+				background-color: rgba(0,0,0,0.2)
+				outline: 0
+			a
+				text-decoration: none
+	.slct
+		width: 450px
+		height: 62px
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 5px
+		padding-left: 10px
+		padding-right: 30px
+		display: block
+		@include font(#000, 16, $font_OpenSansRegular, 1.2)
+		line-height: 62px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		-o-text-overflow: ellipsis
+		text-decoration: none
+		position: relative
+		transition: color 1s
+		&.active
+			color: #000
+			background-color: #F4F4F4
+	.slct_img_wrap
+		max-width: 100%
+		width: 40px
+		text-align: center
+		display: inline-block
+		align-items: center
+		justify-content: center
+		margin-right: 15px
+	.slct_arrow
+		position: absolute
+		top: calc(50% - 12px)
+		right: 20px
+		cursor: pointer
+		.fa
+			@include fz(20)
+			color: $main_color
+			position: relative
+			z-index: 10
+			transition: 0.3s
+		&.active .fa
+			transform: rotate(180deg)
+
+// media
+
+@import '../../sass/_media.sass'

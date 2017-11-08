@@ -581,7 +581,6 @@ nav[canvas]
 .header__logo
 	display: inline-block
 	text-align: center
-	background-color: #414141
 	margin-top: 18px
 	margin-bottom: 18px
 	a
@@ -612,6 +611,15 @@ nav[canvas]
 				font-family: $font_OpenSansLight
 				text-decoration: none
 				transition: .5s
+				&:hover
+					text-decoration: none
+					color: $main_color
+				&:active
+					text-decoration: none
+					color: $main_color
+				&:focus
+					text-decoration: none
+					color: $main_color
 				&:after
 					content: ""
 					width: 100%
@@ -763,10 +771,11 @@ nav[canvas]
 	padding-left: 20px
 	padding-right: 20px
 	transition: 0.5s
+	cursor: pointer
 	&:hover
-		background-color: $main_color
+		background-color: #F0F0F0
 	&.active
-		background-color: $main_color
+		background-color: #F0F0F0
 .give-and-receive__item-img
 	max-width: 100%
 	width: 46px

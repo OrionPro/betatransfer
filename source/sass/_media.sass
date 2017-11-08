@@ -63,8 +63,8 @@
 		display: none
 	.header__logo
 		display: block
-		margin-top: 0
-		margin-bottom: 0
+		margin-top: 5px
+		margin-bottom: 10px
 	.header__modal
 		margin-top: 40px
 	nav[canvas]
@@ -164,6 +164,9 @@
 		tr
 			td
 				padding-right: 15px
+	.your-bills-item
+		.title
+			width: 270px
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -229,6 +232,27 @@
 	.your-operations__table-wrap
 		.news__pagination
 			width: 700px
+	.personal-account-partner-funds__table-wrap
+		overflow: auto
+		table
+			width: 700px
+	.personal-account
+		.select
+			width: 100%
+			.slct
+				width: 100%
+	.your-bills-item
+		flex-direction: column
+		justify-content: center
+		.title
+			width: inherit
+		a
+			margin: 0
+	.personal-account-partner-funds__input
+		.input_wrap
+			display: block
+		input
+			width: 100%
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
@@ -246,6 +270,7 @@
 			width: 550px
 	.table-info
 		display: block
+
 // Extra small devices (portrait phones, less than 521px)
 @media only screen and (max-width : 520px)
 	/**/

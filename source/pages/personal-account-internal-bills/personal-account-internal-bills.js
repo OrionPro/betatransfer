@@ -1,7 +1,7 @@
 
 import common from '../../js/common';
 
-import './personal-account-your-operations.sass';
+import './personal-account-internal-bills.sass';
 
 $(document).ready( function() {
 

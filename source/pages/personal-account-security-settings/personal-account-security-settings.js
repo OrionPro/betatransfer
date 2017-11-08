@@ -1,7 +1,7 @@
 
 import common from '../../js/common';
 
-import './personal-account-your-operations.sass';
+import './personal-account-security-settings.sass';
 
 $(document).ready( function() {
 

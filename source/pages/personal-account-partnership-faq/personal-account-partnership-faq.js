@@ -1,7 +1,7 @@
 
 import common from '../../js/common';
-
-import './personal-account-your-operations.sass';
+import '../../pages/personal-account-partnership-faq/personal-account-partnership-faq.pug'; //это для обновления страницы при hotreload - при npm build убрать
+import './personal-account-partnership-faq.sass';
 
 $(document).ready( function() {
 

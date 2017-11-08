@@ -54,6 +54,12 @@ function get_name_browser() {
 	return 'Не определен';
 }
 $(document).ready(function () {
+	// вводим только цифры
+	$('input[type=tel]').on('keydown', function(e){
+		if(e.key.length == 1 && e.key.match(/[^0-9'".]/)){
+			return false;
+		};
+	});
 	// вызов tabs
 	tabs({
 		btn:'.tabs-items-wrap > .tabs-item',

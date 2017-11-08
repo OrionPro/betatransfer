@@ -38,7 +38,7 @@ block main
 	section.betatransfer
 		.container
 			.all-title
-				h1 ВАШИ ОПЕРАЦИИ
+				h1 ПАРТНЕРСКИЕ ОБМЕНЫ
 				.all-title__bread-crumbs
 					ul
 						li <<
@@ -46,127 +46,81 @@ block main
 			.row
 				.col-12.col-xl-9
 					main.main
-						.your-operations__info
-							.your-operations__info-item
-								span Персональная скидка:
-								span.result 0.5%
-							.your-operations__info-item
-								span Обменов:
-								span.result 70
-							.your-operations__info-item
-								span Сумма обменов:
-								span.result 145051.726607999997 USD
-						span.your-operations-table-info Листайте
-							.fa.fa-long-arrow-right
+						div.info-block
+							span.your-operations-table-info Листайте
+								.fa.fa-long-arrow-right
 						.your-operations__table-wrap
 							table.your-operations-table
 								tbody
 									tr
-										th.your-operations-table_id ID
 										th.your-operations-table_data ДАТА
-										th.your-operations-table_exchange КУРС
-										th.your-operations-table_out ОТДАЁТЕ
-										th.your-operations-table_in ПОЛУЧАЕТЕ
-										th.your-operations-table_status СТАТУС
+										th.your-operations-table_user ПОЛЬЗОВАТЕЛЬ
+										th.your-operations-table_data ДАННЫЕ
+										th.your-operations-table_in ВОЗНАГРАЖДЕНИЕ
 									tr
-										td
-											| 5362
 										td
 											| 02.04.2017,
 											| 21:09
 										td
-											| 1 BTC
+											| desik2005
+										td.your-operations-data
+											span 1 USD
 											i.fa.fa-caret-right
-											b 60240
-											|  RUB
-										td
-											p 1.075
-											p Bitcoin BTC
-										td.your-operations-curs-in
-											p
-												b 65081.790000000001
-											p АльфаБанк RUB
-										td.your-operations-curs_status.success
-											span выполненная заявка
+											span
+												b 60240
+												|  RUB
+										td.your-operations-remuneration
+											span
+												b 60240
+												|  RUB
 									tr
-										td
-											| 5362
 										td
 											| 02.04.2017,
 											| 21:09
 										td
-											| 1 BTC
+											| desik2005
+										td.your-operations-data
+											span 1 USD
 											i.fa.fa-caret-right
-											b 60240
-											|  RUB
-										td
-											p 1.075
-											p Bitcoin BTC
-										td.your-operations-curs-in
-											p
-												b 65081.790000000001
-											p АльфаБанк RUB
-										td.your-operations-curs_status.delete
-											span выполненная заявка
+											span
+												b 60240
+												|  RUB
+										td.your-operations-remuneration
+											span
+												b 60240
+												|  RUB
 									tr
-										td
-											| 5362
 										td
 											| 02.04.2017,
 											| 21:09
 										td
-											| 1 BTC
+											| desik2005
+										td.your-operations-data
+											span 1 USD
 											i.fa.fa-caret-right
-											b 60240
-											|  RUB
-										td
-											p 1.075
-											p Bitcoin BTC
-										td.your-operations-curs-in
-											p
-												b 65081.790000000001
-											p АльфаБанк RUB
-										td.your-operations-curs_status.success
-											span выполненная заявка
+											span
+												b 60240
+												|  RUB
+										td.your-operations-remuneration
+											span
+												b 60240
+												|  RUB
 									tr
-										td
-											| 5362
 										td
 											| 02.04.2017,
 											| 21:09
 										td
-											| 1 BTC
+											| desik2005
+										td.your-operations-data
+											span 1 USD
 											i.fa.fa-caret-right
-											b 60240
-											|  RUB
-										td
-											p 1.075
-											p Bitcoin BTC
-										td.your-operations-curs-in
-											p
-												b 65081.790000000001
-											p АльфаБанк RUB
-										td.your-operations-curs_status.success
-											span выполненная заявка
-							.news__pagination
-								ul.pagination
-									li
-										a(href="#" class="active") 1
-									li
-										a(href="#") 2
-									li
-										a(href="#") 3
-									li
-										span(class="ellipsis") ...
-									li
-										a(href="#") 20
-									li
-										a(href="#") 21
-									li
-										a(href="#")
-											i.fa.fa-long-arrow-right
-									li
-										a(href="#") Последняя
+											span
+												b 60240
+												|  RUB
+										td.your-operations-remuneration
+											span
+												b 60240
+												|  RUB
 				.col-12.col-xl-3
 					aside.aside.all-page
 						.aside-personal-account
@@ -180,7 +134,7 @@ block main
 										| 0.5%
 								nav.aside-personal-account__nav
 									ul
-										-var links = [{title:'Личный кабинет', href:'#'},{title:'Настройка безопасности', href:'#'},{title:'Ваши счета', href:'#'},{title:'Внутренний счет', href:'#'},{title:'Ваши операции', href:'#', activeClass:'active'},{title:'XML-файл курсов', href:'#'},{title:'TXT-файл курсов', href:'#'},{title:'Партнерский аккаунт', href:'#'},{title:'Рекламные материалы', href:'#'},{title:'Партнерские переходы', href:'#'},{title:'Партнерские обмены', href:'#'},{title:'Рефералы', href:'#'},{title:'Вывод партнерских средств', href:'#'},{title:'Партнерский FAQ', href:'#'},{title:'Условия участия в партнерской программе', href:'#'}];
+										-var links = [{title:'Личный кабинет', href:'#'},{title:'Настройка безопасности', href:'#'},{title:'Ваши счета', href:'#'},{title:'Внутренний счет', href:'#'},{title:'Ваши операции', href:'#'},{title:'XML-файл курсов', href:'#'},{title:'TXT-файл курсов', href:'#'},{title:'Партнерский аккаунт', href:'#'},{title:'Рекламные материалы', href:'#'},{title:'Партнерские переходы', href:'#'},{title:'Партнерские обмены', href:'#', activeClass:'active'},{title:'Рефералы', href:'#'},{title:'Вывод партнерских средств', href:'#'},{title:'Партнерский FAQ', href:'#'},{title:'Условия участия в партнерской программе', href:'#'}];
 										each i in links
 											li
 												a(href=i.href class=i.activeClass)= i.title
