@@ -1,0 +1,42 @@
+@import "../../sass/vars.sass"
+
+.your-operations__table-wrap
+	margin-bottom: 40px
+	position: relative
+	background-color: #fff
+	padding-bottom: 40px
+.your-operations-table
+	width: 100%
+	@include fz(14)
+	background: #fff
+	tr
+		i
+			font-size: 14px
+			color: $main_color
+		th
+			color: #fff
+			background-color: $main_color
+			font-weight: normal
+			padding-top: 12.5px
+			padding-bottom: 12.5px
+			&:first-of-type
+				width: 34.5%
+				padding-left: 20px
+				border-top-left-radius: 5px
+			&:last-of-type
+				border-top-right-radius: 5px
+		td
+			font-weight: normal
+			padding-top: 19px
+			padding-bottom: 19px
+			padding-right: 25px
+			border-bottom: .4px solid #eee
+			line-height: 1.2
+			cursor: pointer
+			&:first-of-type
+				padding-left: 20px
+
+
+// media
+
+@import '../../sass/_media.sass'

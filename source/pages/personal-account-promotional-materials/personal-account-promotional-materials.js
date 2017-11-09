@@ -1,7 +1,7 @@
 
 import common from '../../js/common';
 
-import './personal-account-partnership-faq.sass';
+import './personal-account-promotional-materials.sass';
 
 $(document).ready( function() {
 

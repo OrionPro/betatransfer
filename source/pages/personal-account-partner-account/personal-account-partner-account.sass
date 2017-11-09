@@ -1,0 +1,77 @@
+@import "../../sass/vars.sass"
+
+.your-operations__info
+	padding: 0 20px 15px 20px
+	background-color: #fff
+	margin-bottom: 40px
+	border: 1px solid #dddddd
+.your-operations__info-item
+	display: flex
+	@include fz(18)
+	padding-top: 16px
+	padding-bottom: 16px
+	border-bottom: 1px solid #eee
+	span
+		&:first-of-type
+			min-width: 80px
+			padding-right: 20px
+	.result
+		text-align: right
+		min-width: 80px
+		margin-left: auto
+		word-break: break-all
+.authorization__title
+	width: 100%
+	height: 50px
+	padding-left: 20px
+	line-height: 50px
+	color: #fff
+	text-transform: uppercase
+	background-color: #2dc0bf
+	border: 1px solid #2dc0bf
+	border-radius: 5px 5px 0 0
+.authorization__wrap
+	padding: 15px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: 1px solid #dddddd
+.your-bills-item
+	display: flex
+	align-items: center
+	padding-bottom: 14px
+	margin-bottom: 20px
+	border-bottom: .4px solid #eee
+	@include fz(16)
+	.title
+		width: 380px
+		font-size: 16px
+		font-family: $font_OpenSansSemiBold
+.promotional-materials
+	padding: 35px 20px 40px
+	margin-bottom: 40px
+	background-color: #fff
+	border: .4px solid #ddd
+.promotional-materials__txt
+	margin-bottom: 40px
+	p
+		margin-bottom: 20px
+		&:last-of-type
+			margin-bottom: 0
+.affiliate-links
+	.affiliate-links__item
+		margin-bottom: 10px
+		p
+			@include fz(18)
+			font-family: $font_OpenSansSemiBold
+			margin-bottom: 10px
+			line-height: 1.2
+	.affiliate-links__link
+		min-height: 80px
+		padding: 20px 50px 20px 20px
+		background-color: #f2f2f2
+		border: 0.5px solid #e0e0e0
+		border-radius: 9px
+		line-height: 1.2
+// media
+
+@import '../../sass/_media.sass'

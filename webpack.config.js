@@ -43,6 +43,10 @@ const common = merge([
 			'personal-account-security-settings': PATHS.source + '/pages/personal-account-security-settings/personal-account-security-settings.js',
 			'personal-account-partnership-exchanges': PATHS.source + '/pages/personal-account-partnership-exchanges/personal-account-partnership-exchanges.js',
 			'personal-account-partnership-faq': PATHS.source + '/pages/personal-account-partnership-faq/personal-account-partnership-faq.js',
+			'personal-account-partner-account': PATHS.source + '/pages/personal-account-partner-account/personal-account-partner-account.js',
+			'personal-account-promotional-materials': PATHS.source + '/pages/personal-account-promotional-materials/personal-account-promotional-materials.js',
+			'personal-account-referrals': PATHS.source + '/pages/personal-account-referrals/personal-account-referrals.js',
+			'personal-account-terms-of-participation': PATHS.source + '/pages/personal-account-terms-of-participation/personal-account-terms-of-participation.js',
 		},
 		output: {
 			path: PATHS.build,
@@ -170,6 +174,26 @@ const common = merge([
 				filename: 'personal-account-partnership-faq.html',
 				chunks: ['personal-account-partnership-faq', 'common'],
 				template: PATHS.source + '/pages/personal-account-partnership-faq/personal-account-partnership-faq.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-partner-account.html',
+				chunks: ['personal-account-partner-account', 'common'],
+				template: PATHS.source + '/pages/personal-account-partner-account/personal-account-partner-account.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-promotional-materials.html',
+				chunks: ['personal-account-promotional-materials', 'common'],
+				template: PATHS.source + '/pages/personal-account-promotional-materials/personal-account-promotional-materials.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-referrals.html',
+				chunks: ['personal-account-referrals', 'common'],
+				template: PATHS.source + '/pages/personal-account-referrals/personal-account-referrals.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'personal-account-terms-of-participation.html',
+				chunks: ['personal-account-terms-of-participation', 'common'],
+				template: PATHS.source + '/pages/personal-account-terms-of-participation/personal-account-terms-of-participation.pug'
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'
